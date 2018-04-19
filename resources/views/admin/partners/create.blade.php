@@ -9,8 +9,6 @@
                 <small>приятные слова..</small>
             </h1>
         </section>
-
-        <!-- Main content -->
         <section class="content">
         {{Form::open(['route'	=>	'partners.store', 'files'	=>	true])}}
             <!-- Default box -->

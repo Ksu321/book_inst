@@ -9,13 +9,12 @@
                 <small>приятные слова..</small>
             </h1>
         </section>
-
-        <!-- Main content -->
         <section class="content">
-        {{Form::open(['route'	=>	'partners.update',
-         'files'	=>	true,
-         'method'	=>	'put'])}}
-        <!-- Default box -->
+        {{Form::open([
+                            'route'	=>	['partners.update', $partner->id],
+                            'files'	=>	true,
+                            'method'	=>	'put'
+	                ])}}
             <div class="box">
                 <div class="box-header with-border">
                     @include('admin.errors')
@@ -24,21 +23,22 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Название</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="name" value="{{old('name')}}">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="name" value="{{$partner->name}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ссылка</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="link" value="{{old('link')}}">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="link" value="{{$partner->link}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputFile">Картинка</label>
+                            <img src="{{$partner->getImage()}}" alt="" class="img-responsive" width="200">
                             <input type="file" name="image"  id="exampleInputFile">
 
                             <p class="help-block">Какое-нибудь уведомление о форматах..</p>
                         </div>
                         <div class="form-group">
                             <label>
-                                <input type="checkbox" class="minimal"  name="status">
+                                {{Form::checkbox('status', '1', $partner->status, ['class'=>'minimal'])}}
                             </label>
                             <label>
                                 Черновик
@@ -46,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.box-body -->
                 <div class="box-footer">
                     <a href="{{route('partners.index')}}" class="btn btn-default" > Назад</a>
                     <button class="btn btn-success pull-right">Додати</button>

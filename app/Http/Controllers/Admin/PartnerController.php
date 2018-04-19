@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class PartnerController extends Controller
 {
@@ -39,7 +40,7 @@ class PartnerController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'link' => 'required|url',
+            'link' => 'required|url|unique:partners',
             'image' => 'required|image',
         ]);
         $partner = Partner::add($request->all());
@@ -66,7 +67,7 @@ class PartnerController extends Controller
      */
     public function edit($id)
     {
-        $partner = Partner::findOrFail($id)->remove();
+        $partner = Partner::findOrFail($id);
         return view('admin.partners.edit', compact('partner'));
     }
 
@@ -79,7 +80,19 @@ class PartnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $partner = Partner::findOrFail($id);
+        $this->validate($request,[
+            'name' => 'required',
+            'link' => [
+                'required',
+                'url',
+                Rule::unique('partners')->ignore($partner->id),
+            ],
+            'image' => 'nullable|image',
+        ]);
+        $partner->edit($request->all());
+        $partner->uploadImage($request->file('image'));
+        return redirect()->route('partners.index');
     }
 
     /**
@@ -91,6 +104,6 @@ class PartnerController extends Controller
     public function destroy($id)
     {
         Partner::findOrFail($id)->remove();
-        return redirect()->route('posts.index');
+        return redirect()->route('partners.index');
     }
 }

@@ -54,10 +54,6 @@
                     </table>
                 </div>
             </div>
-            <!-- /.box -->
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
 @endsection
