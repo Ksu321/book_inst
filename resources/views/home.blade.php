@@ -7,9 +7,9 @@
                     <h3 class="section-heading__heading">новини</h3>
                 </div>
             </div>
+            @foreach($announcements as $announcement)
             <div class="row">
                 <div class="col-md-12">
-                    @foreach($announcements as $announcement)
                     <div class="row horizontal-scroll">
                         <div class="col-md-4 horizontal-scroll__item">
                             <div class="horizontal-scroll_border">
@@ -38,9 +38,10 @@
                             <a href="#" class="section-button__all">всі новини</a>
                         </div>
                     </div>
-                        @endforeach
                 </div>
             </div>
+            @endforeach
+
         </div>
         <div class="container">
             <div class="row">
@@ -287,40 +288,18 @@
                     <h3 class="section-heading__heading">партнери</h3>
                 </div>
             </div>
+            @foreach($partners as $partner)
             <div class="row">
                 <div class="col-md-12 partners-slider">
                     <div class="partners-slider__item">
-                        <a href="http://tyzhden.ua/" class="partners-slider__item-link">
-                            <img src="img/partners/tyzhden2.png" alt="Tyzhden" class="partners-slider__image">
-                        </a>
-                    </div>
-                    <div class="partners-slider__item">
-                        <a href="http://dergkino.gov.ua/" class="partners-slider__item-link">
-                            <img src="img/partners/ukrainstatefilmagency.png" alt="Ukrainian State Film Agency" class="partners-slider__image">
-                        </a>
-                    </div>
-                    <div class="partners-slider__item">
-                        <a href="http://www.dovzhenkocentre.org/event/136/" class="partners-slider__item-link">
-                            <img src="img/partners/niminochi.png" alt="Німі Ночі" class="partners-slider__image">
-                        </a>
-                    </div>
-                    <div class="partners-slider__item">
-                        <a href="https://molodist.com/" class="partners-slider__item-link">
-                            <img src="img/partners/molodist.png" alt="Molodist" class="partners-slider__image">
-                        </a>
-                    </div>
-                    <div class="partners-slider__item">
-                        <a href="http://www.dakhabrakha.com.ua/" class="partners-slider__item-link">
-                            <img src="img/partners/dakhabrakha.png" alt="DahaBraha" class="partners-slider__image">
-                        </a>
-                    </div>
-                    <div class="partners-slider__item">
-                        <a href="http://tyzhden.ua/" class="partners-slider__item-link">
-                            <img src="img/partners/tyzhden2.png" alt="Tyzhden" class="partners-slider__image">
+                        <a href="{{$partner->link}}" class="partners-slider__item-link">
+                            <img src="{{$partner->getImage()}}" alt="Tyzhden" class="partners-slider__image">
                         </a>
                     </div>
                 </div>
             </div>
+            @endforeach
+
         </div>
     </main>
 @endsection

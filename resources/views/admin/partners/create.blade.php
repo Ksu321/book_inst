@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label>
-                                <input type="checkbox" class="minimal"  name="status">
+                                {{Form::checkbox('status', '1', $partner->status, ['class'=>'minimal'])}}
                             </label>
                             <label>
                                 Черновик
@@ -48,7 +48,7 @@
                     <button class="btn btn-success pull-right">Додати</button>
                 </div>
             </div>
-            {!! Form::close() !!}
+            {{ Form::close() }}
         </section>
     </div>
 @endsection

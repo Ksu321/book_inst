@@ -45,6 +45,7 @@ class PartnerController extends Controller
         ]);
         $partner = Partner::add($request->all());
         $partner->uploadImage($request->file('image'));
+        $partner->toggleStatus($request->get('status'));
         return redirect()->route('partners.index');
     }
 
@@ -92,6 +93,7 @@ class PartnerController extends Controller
         ]);
         $partner->edit($request->all());
         $partner->uploadImage($request->file('image'));
+        $partner->toggleStatus($request->get('status'));
         return redirect()->route('partners.index');
     }
 

@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Partner extends Model
 {
+    const IS_DRAFT = 0;
+    const IS_PUBLIC = 1;
+
     protected $fillable =['name', 'link'];
 
     public static function add($fields)
@@ -52,5 +55,27 @@ class Partner extends Model
     {
         if ($this->image == null) { return 'img/no-img.png'; }
         return '/uploads/pages/partners/' . $this->image;
+    }
+
+    public function setDraft()
+    {
+        $this->status = 0;
+        $this->save();
+    }
+
+    public function setPublic()
+    {
+        $this->status = 1;
+        $this->save();
+    }
+
+    public function toggleStatus($value)
+    {
+        if($value == null)
+        {
+            return $this->setDraft();
+        }
+
+        return $this->setPublic();
     }
 }
