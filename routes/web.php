@@ -35,3 +35,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/partners', 'PartnerController');
 });
 
+Route::group(['namespace' => 'Page'], function (){
+    Route::get('/announcements', 'AnnouncementController@index');
+    Route::get('/announcements/{slug}', 'AnnouncementController@showSingle');
+
+});

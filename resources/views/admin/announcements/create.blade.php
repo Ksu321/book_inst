@@ -41,19 +41,6 @@
                                     ['class' => 'form-control select2'])
                                 }}
                             </div>
-
-                            <div class="form-group">
-                                <select name="myselect" class="form-control select2" multiple="multiple"
-                                        data-placeholder="Выберите теги">
-                                    @foreach ($tags as $key => $value)
-                                        <option value="{{ $key }}"
-
-                                        >{{ $value }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-
                             <div class="form-group">
                                 <label>Теги</label>
                                 {{Form::select('tags[]',

@@ -349,6 +349,65 @@ function() {
 });
 })(jQuery);
 
+(function($){
+	$.fn.jTruncate = function(options) {
+	   
+		var defaults = {
+			length: 300,
+			minTrail: 20,
+			moreText: "more",
+			lessText: "less",
+			ellipsisText: "...",
+			moreAni: "",
+			lessAni: ""
+		};
+		
+		var options = $.extend(defaults, options);
+	   
+		return this.each(function() {
+			obj = $(this);
+			var body = obj.html();
+			
+			if(body.length > options.length + options.minTrail) {
+				var splitLocation = body.indexOf(' ', options.length);
+				if(splitLocation != -1) {
+					// truncate tip
+					var splitLocation = body.indexOf(' ', options.length);
+					var str1 = body.substring(0, splitLocation);
+					var str2 = body.substring(splitLocation, body.length - 1);
+					obj.html(str1 + '<span class="truncate_ellipsis">' + options.ellipsisText + 
+						'</span>' + '<span class="truncate_more">' + str2 + '</span>');
+					obj.find('.truncate_more').css("display", "none");
+					
+					// insert more link
+					obj.append(
+						'<div class="clearboth">' +
+							'<a href="#" class="truncate_more_link">' + options.moreText + '</a>' +
+						'</div>'
+					);
+
+					// set onclick event for more/less link
+					var moreLink = $('.truncate_more_link', obj);
+					var moreContent = $('.truncate_more', obj);
+					var ellipsis = $('.truncate_ellipsis', obj);
+					moreLink.click(function() {
+						if(moreLink.text() == options.moreText) {
+							moreContent.show(options.moreAni).css("display", "inline");
+							moreLink.text(options.lessText);
+							ellipsis.css("display", "none");
+						} else {
+							moreContent.hide(options.lessAni);
+							moreLink.text(options.moreText);
+							ellipsis.css("display", "inline");
+						}
+						return false;
+				  	});
+				}
+			} // end if
+			
+		});
+	};
+})(jQuery);
 function subMenu() {
     var menu = $('.navigation__item');
         menu.click(function(e) {
@@ -359,6 +418,7 @@ function subMenu() {
             if ($(this).hasClass('active')) {
                 $('.sub-menu').not(this).removeClass('visible');
                 $(this).find('.sub-menu').toggleClass('visible');
+                $('header').toggleClass('expand');
                 close();
             }
         });
@@ -436,26 +496,25 @@ function verticalScroll() {
     arrow_down.append('<span class="glyphicon glyphicon-menu-down"></span>');
 }
 
-function dots() {
-    var horizontal_headings = 100,
-        item_description = $('.horizontal-scroll__heading :first-child'),
-        description_text = item_description.text();
-    if (description_text.length >  horizontal_headings) {
-        item_description.text(description_text.slice(0,  horizontal_headings) + ' ...');
-    }
-    var horizontal_size = 170,
-        item_description = $('.horizontal-scroll__description'),
-        description_text = item_description.text();
-    if (description_text.length > horizontal_size) {
-        item_description.text(description_text.slice(0, horizontal_size) + ' ...');
-    }
-    var vertical_size = 270,
-        item_description = $('.vertical-scroll__description p:first-child'),
-        description_text = item_description.text();
-    if (description_text.length > vertical_size) {
-        item_description.text(description_text.slice(0, vertical_size) + ' ...');
-    }
-}
+$('.horizontal-scroll__heading').children().jTruncate({
+    length : 100,
+    minTrail : 0,
+    moreText : '',
+    ellipsisText : '...'
+});
+
+$('.horizontal-scroll__description').children().jTruncate({
+    length : 100,
+    minTrail : 0,
+    moreText : '',
+    ellipsisText : '...'
+});
+$('.vertical-scroll__description').children().jTruncate({
+    length : 270,
+    minTrail : 0,
+    moreText : '',
+    ellipsisText : '...'
+});
 
 function slider() {
     $('.partners-slider').slick({
@@ -465,8 +524,80 @@ function slider() {
         arrows : true,
         prevArrow : '<span class="glyphicon glyphicon-menu-left"></span>',
         nextArrow : '<span class="glyphicon glyphicon-menu-right"></span>'
-    });
+    }); // Slider for partners images
+    $('.alphabet-slider').slick({
+        slidesToShow : 15,
+        swipeToSlide : true,
+        arrows : true,
+        prevArrow : '<span class="glyphicon glyphicon-menu-left"></span>',
+        nextArrow : '<span class="glyphicon glyphicon-menu-right"></span>'
+    }); // Slider for alphabet
+    $('.authors-slider').slick({
+        slidesToShow : 3,
+        slidesToScroll : 3,
+        customPaging: function (slider, i) {
+            return i + 1;
+        },
+        dots:true,
+        arrows : true,
+        prevArrow : '<span class="glyphicon glyphicon-menu-left"></span>',
+        nextArrow : '<span class="glyphicon glyphicon-menu-right"></span>',
+        appendArrows: $('.slider-pagination__item_authors'),
+        appendDots: $('.slider-pagination__item_authors'),
+    }); // Slider for authors names at wrighters.html
+    $('.authors-slider__from-ukr').slick({
+        slidesToShow : 3,
+        slidesToScroll : 3,
+        customPaging: function (slider, i) {
+            return i + 1;
+        },
+        dots:true,
+        arrows : true,
+        prevArrow : '<span class="glyphicon glyphicon-menu-left"></span>',
+        nextArrow : '<span class="glyphicon glyphicon-menu-right"></span>',
+        appendArrows: $('.slider-pagination__item_from-ukr'),
+        appendDots: $('.slider-pagination__item_from-ukr'),
+    }), // Slider for pagination (interpreters FROM ukrainian) at translaters.html
+        $('.slick-dots').wrap('<div class="slider-pagination__wrapper"></div>'); // Wrapping ul element from slick at translaters.html
+        $('.slick-dots').addClass('clearfix'); // Adding .clearfix for ul element from slick at translaters.html
+    
+        /*var sliderPaginationElements = $('.slick-dots li');
+        var prev_arrow = $('.slider-pagination .glyphicon-menu-left');*/
+    
+    $('.authors-slider__to-ukr').slick({
+        slidesToShow : 3,
+        slidesToScroll : 3,
+        customPaging: function (slider, i) {
+            return i + 1;
+        },
+        dots:true,
+        arrows : true,
+        prevArrow : '<span class="glyphicon glyphicon-menu-left"></span>',
+        nextArrow : '<span class="glyphicon glyphicon-menu-right"></span>',
+        appendArrows: $('.slider-pagination__item_to-ukr'),
+        appendDots: $('.slider-pagination__item_to-ukr'),
+    }), // Slider for pagination (interpreters TO ukrainian) at translaters.html
+        $('.slick-dots').wrap('<div class="slider-pagination__wrapper"></div>');
+        $('.slick-dots').addClass('clearfix');
+    
+        /*var sliderPaginationElements = $('.slick-dots li');
+        var prev_arrow = $('.slider-pagination .glyphicon-menu-left');*/
 }
+
+function customFileSelect() {
+    var inputTypeFile = $('input[type="file"]');
+    var buttonAdd = $('.section-heading_section-button__all');
+//    var fileNameText = $('.section-heading_section-button__file-name');
+        $(buttonAdd).click(function() {
+            $(inputTypeFile).click();
+//            var file = $(inputTypeFile).prop('files');
+//            var fileName = $(file).prop('name');
+//            $(fileNameText).append(fileName);
+//            console.log(fileName);
+//            return false;
+        });
+}
+
 
 
 
@@ -475,6 +606,6 @@ $(document).ready(function() {
     close();
     horizontalScroll();
     verticalScroll();
-    dots();
     slider();
+    customFileSelect();
 });

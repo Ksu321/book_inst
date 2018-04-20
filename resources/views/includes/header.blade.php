@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-6 logo">
                         <a href="#" class="logo__link">
-                            <img src="img/logo.svg" alt="logo" class="logo__image">
+                            <img src="/img/logo.svg" alt="logo" class="logo__image">
                         </a>
                     </div>
                     <div class="col-md-6 right-part">

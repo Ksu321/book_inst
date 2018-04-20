@@ -148,7 +148,7 @@ class Announcement extends Model
 
     public function getCategoryID()
     {
-        return $this->category != null ? $this->category->id : null;
+        return $this->category != null ? $this->category->id : 'Нет категории';
     }
 
     public function getDateAttribute($value)
@@ -156,5 +156,10 @@ class Announcement extends Model
         $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
 
         return $date;
+    }
+
+    public function getDate()
+    {
+        return Carbon::createFromFormat('d/m/y', $this->date)->format('d.m.Y');
     }
 }

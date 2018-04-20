@@ -8,7 +8,7 @@
 @include('includes.footer')
 
 
-<script src="js/pages.js"></script>
+<script src="/js/pages.js"></script>
 
 
 <script>

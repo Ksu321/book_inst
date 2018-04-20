@@ -7,20 +7,20 @@
                     <h3 class="section-heading__heading">новини</h3>
                 </div>
             </div>
-            @foreach($announcements as $announcement)
             <div class="row">
                 <div class="col-md-12">
                     <div class="row horizontal-scroll">
+                        @foreach($announcements as $announcement)
                         <div class="col-md-4 horizontal-scroll__item">
                             <div class="horizontal-scroll_border">
                                 <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/326424/pexels-photo-326424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                                    <img src="{{$announcement->getImage()}}" alt="">
                                 </div>
                                 <div class="horizontal-scroll__heading">
                                     <h4>{{$announcement->title}}</h4>
                                 </div>
                                 <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
+                                    <span class="horizontal-scroll__date">{{$announcement->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
                                     <span class="horizontal-scroll__place">київ</span>
                                 </div>
@@ -30,8 +30,12 @@
                                 <div class="horizontal-scroll__button clearfix">
                                     <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
+
                             </div>
+
                         </div>
+                        @endforeach
+
                     </div>
                     <div class="row section-button">
                         <div class="col-md-3 col-md-offset-9">
@@ -40,7 +44,6 @@
                     </div>
                 </div>
             </div>
-            @endforeach
 
         </div>
         <div class="container">

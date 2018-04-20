@@ -37,17 +37,17 @@
                             <div class="col-md-12 footer__social__item">
                                 <div class="footer__twitter">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/twitter.svg" alt="twitter">
+                                        <img src="/img/social/twitter.svg" alt="twitter">
                                     </a>
                                 </div>
                                 <div class="footer__whatsapp">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/wtsp.svg" alt="whatsapp">
+                                        <img src="/img/social/wtsp.svg" alt="whatsapp">
                                     </a>
                                 </div>
                                 <div class="footer__google">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/google.svg" alt="google+">
+                                        <img src="/img/social/google.svg" alt="google+">
                                     </a>
                                 </div>
                             </div>
@@ -56,17 +56,17 @@
                             <div class="col-md-12 footer__social__item">
                                 <div class="footer__youtube">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/youtube.svg" alt="youtube">
+                                        <img src="/img/social/youtube.svg" alt="youtube">
                                     </a>
                                 </div>
                                 <div class="footer__facebook">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/fcbook.svg" alt="facebook">
+                                        <img src="/img/social/fcbook.svg" alt="facebook">
                                     </a>
                                 </div>
                                 <div class="footer__instagram">
                                     <a href="#" class="footer__link">
-                                        <img src="img/social/instagram.svg" alt="instagram">
+                                        <img src="/img/social/instagram.svg" alt="instagram">
                                     </a>
                                 </div>
                             </div>

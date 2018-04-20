@@ -24,13 +24,6 @@ mix.styles([
 	'resources/assets/admin/dist/css/skins/_all-skins.min.css'
 ], 'public/css/admin.css');
 
-mix.styles([
-    'resources/assets/pages/css/jquery.mCustomScrollbar.css',
-    'resources/assets/pages/css/slick.css',
-    'resources/assets/pages/css/responsive_menu.css',
-    // 'resources/assets/pages/css/style.less',
-    'resources/assets/pages/css/style.css',
-], 'public/css/pages.css');
 
 
 mix.scripts([
@@ -48,6 +41,16 @@ mix.scripts([
 	'resources/assets/admin/dist/js/scripts.js'
 ], 'public/js/admin.js');
 
+// front-end scripts and styles
+mix.styles([
+    'resources/assets/pages/css/jquery.mCustomScrollbar.css',
+    'resources/assets/pages/css/slick.css',
+    'resources/assets/pages/css/responsive_menu.css',
+    // 'resources/assets/pages/css/style.less',
+    'resources/assets/pages/css/style.css',
+], 'public/css/pages.css');
+
+
 mix.scripts([
     'resources/assets/pages/js/jquery-3.2.1.min.js',
     'resources/assets/pages/bootstrap/js/bootstrap.min.js',
@@ -55,7 +58,8 @@ mix.scripts([
     'resources/assets/pages/js/jquery.mCustomScrollbar.concat.min.js',
     'resources/assets/pages/js/slick.min.js',
     'resources/assets/pages/js/responsive_menu.js',
-    'resources/assets/pages/js/main.js',
+    'resources/assets/pages/js/jTruncate.js',
+    'resources/assets/pages/js/main.js'
 ], 'public/js/pages.js');
 
 
