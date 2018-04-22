@@ -21,7 +21,7 @@
                                 <div class="horizontal-scroll__date-and-place">
                                     <span class="horizontal-scroll__date">{{$announcement->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
+                                    <span class="horizontal-scroll__place">{{$announcement->city}}</span>
                                 </div>
                                 <div class="horizontal-scroll__description">
                                     <p>{{$announcement->description}}</p>

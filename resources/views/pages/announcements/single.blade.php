@@ -14,8 +14,7 @@
 
             <div>{{$announcement->getTagsTitles()}}</div>     Тег
 
-
-
+            <div>{{$announcement->city}}</div>
 
             <div>{{$announcement->getDate()}}</div>
 

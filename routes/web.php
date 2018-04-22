@@ -27,7 +27,7 @@ Route::get('/', 'HomeController@index');
 //});
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
-    Route::get('/', 'DashboardController@index')->name('index');
+    Route::get('/', 'DashboardController@index')->name(' index');
     Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
@@ -38,5 +38,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
 Route::group(['namespace' => 'Page'], function (){
     Route::get('/announcements', 'AnnouncementController@index');
     Route::get('/announcements/{slug}', 'AnnouncementController@showSingle');
-
 });
+
+Route::get('/tag/{slug}', 'HomeController@showTag')->name('show.tag');
+Route::get('/category/{slug}', 'HomeController@showCategory')->name('show.category');

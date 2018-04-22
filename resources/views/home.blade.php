@@ -22,15 +22,14 @@
                                 <div class="horizontal-scroll__date-and-place">
                                     <span class="horizontal-scroll__date">{{$announcement->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
+                                    <span class="horizontal-scroll__place">{{$announcement->city}}</span>
                                 </div>
                                 <div class="horizontal-scroll__description">
                                     <p>{{$announcement->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
+                                    <a href="{{route('announcements.showSingle', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
-
                             </div>
 
                         </div>
@@ -39,7 +38,7 @@
                     </div>
                     <div class="row section-button">
                         <div class="col-md-3 col-md-offset-9">
-                            <a href="#" class="section-button__all">всі новини</a>
+                            <a href="{{route('announcements.index')}}" class="section-button__all">всі новини</a>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ class Announcement extends Model
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
 
-    protected $fillable = ['title','content', 'date', 'description'];
+    protected $fillable = ['title','content', 'date', 'description', 'city'];
 
     public function category()
     {

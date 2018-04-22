@@ -57,6 +57,7 @@ class AnnouncementController extends Controller
             'description' => 'required',
             'content' => 'required',
             'date' => 'required',
+            'city' => 'required',
             'image' => 'required|image',
         ]);
         $announcement = Announcement::add($request->all());
@@ -111,6 +112,7 @@ class AnnouncementController extends Controller
             'title' =>'required',
             'content'   =>  'required',
             'date'  =>  'required',
+            'city' => 'required',
             'image' =>  'nullable|image'
         ]);
 

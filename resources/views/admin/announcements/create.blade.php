@@ -34,6 +34,11 @@
                                 <p class="help-block">Какое-нибудь уведомление о форматах..</p>
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Город</label>
+                                <input type="text" name="city" class="form-control" id="exampleInputEmail1"
+                                       placeholder="" value="{{old('city')}}">
+                            </div>
+                            <div class="form-group">
                                 <label>Категория</label>
                                 {{Form::select('category_id',
                                     $categories,
