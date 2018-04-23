@@ -5,7 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Добавить анонс
+                Додати книжкову новину
             </h1>
         </section>
         <form action="{{route('announcements.store')}}" id="form" method="post" enctype="multipart/form-data">
@@ -18,12 +18,12 @@
                     <div class="box-body">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Название</label>
+                                <label for="exampleInputEmail1">Назва</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('title')}}">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Описание</label>
+                                <label for="exampleInputEmail1">Опис</label>
                                 <textarea class="form-control" name="description" rows="4" cols="45"
                                           style="resize: none">{{old('description')}}</textarea>
                             </div>
@@ -31,15 +31,15 @@
                                 <label for="exampleInputFile">Лицевая картинка</label>
                                 <input type="file" name="image" value="{{old('image')}}" id="exampleInputFile">
 
-                                <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                                <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Город</label>
+                                <label for="exampleInputEmail1">Місто</label>
                                 <input type="text" name="city" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('city')}}">
                             </div>
                             <div class="form-group">
-                                <label>Категория</label>
+                                <label>Категорія</label>
                                 {{Form::select('category_id',
                                     $categories,
                                     null,
@@ -72,7 +72,7 @@
                                     <input type="checkbox" class="minimal" value="{{old('status')}}" name="status">
                                 </label>
                                 <label>
-                                    Черновик
+                                    Чернетка
                                 </label>
                             </div>
                         </div>

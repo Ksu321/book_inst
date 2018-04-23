@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Добавить тег
-            <small>приятные слова..</small>
+            Додати тег
         </h1>
     </section>
 
@@ -22,7 +21,7 @@
             <div class="box-body">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Название</label>
+                        <label for="exampleInputEmail1">Назва</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title">
                     </div>
                 </div>

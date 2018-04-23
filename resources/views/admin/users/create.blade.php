@@ -3,7 +3,7 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Добавить пользователя
+                Додати користувача
             </h1>
         </section>
         <section class="content">
@@ -16,7 +16,7 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Имя</label>
+                            <label for="exampleInputEmail1">Ім'я</label>
                             <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="{{old('name')}}" placeholder="">
                         </div>
                         <div class="form-group">
@@ -31,13 +31,13 @@
                             <label for="exampleInputFile">Аватар</label>
                             <input type="file" name="avatar" id="exampleInputFile">
 
-                            <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                            <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                         </div>
                     </div>
                 </div>
                 <div class="box-footer">
                     <a href="{{route('users.index')}}" class="btn btn-default" > Назад</a>
-                    <button class="btn btn-success pull-right">Добавить</button>
+                    <button class="btn btn-success pull-right">Додати</button>
                 </div>
 
             </div>

@@ -10,25 +10,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row horizontal-scroll">
-                        @foreach($announcements as $announcement)
+                        @foreach($news as $new)
                         <div class="col-md-4 horizontal-scroll__item">
                             <div class="horizontal-scroll_border">
                                 <div class="horizontal-scroll__image">
-                                    <img src="{{$announcement->getImage()}}" alt="">
+                                    <img src="{{$new->getImage()}}" alt="">
                                 </div>
                                 <div class="horizontal-scroll__heading">
-                                    <h4>{{$announcement->title}}</h4>
+                                    <h4>{{$new->title}}</h4>
                                 </div>
                                 <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">{{$announcement->getDate()}}</span>
+                                    <span class="horizontal-scroll__date">{{$new->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">{{$announcement->city}}</span>
+                                    <span class="horizontal-scroll__place">{{$new->city}}</span>
                                 </div>
                                 <div class="horizontal-scroll__description">
-                                    <p>{{$announcement->description}}</p>
+                                    <p>{{$new->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
-                                    <a href="{{route('announcement.single', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
+                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
                             </div>
 
@@ -54,136 +54,33 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row horizontal-scroll">
+                        @foreach($announcements as $announcement)
                         <div class="col-md-4 horizontal-scroll__item">
                             <div class="horizontal-scroll_border">
                                 <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/326424/pexels-photo-326424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                                    <img src="{{$announcement->getImage()}}" alt="">
                                 </div>
                                 <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                    <h4>{{$announcement->title}}</h4>
                                 </div>
                                 <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
+                                    <span class="horizontal-scroll__date">{{$announcement->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
+                                    <span class="horizontal-scroll__place">{{$announcement->city}}</span>
                                 </div>
                                 <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
+                                    <p>{{$announcement->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
+                                    <a href="{{route('announcement.single', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 horizontal-scroll__item">
-                            <div class="horizontal-scroll_border">
-                                <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-                                </div>
-                                <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
-                                </div>
-                                <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
-                                    <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
-                                </div>
-                                <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
-                                </div>
-                                <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 horizontal-scroll__item">
-                            <div class="horizontal-scroll_border">
-                                <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/884454/pexels-photo-884454.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-                                </div>
-                                <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
-                                </div>
-                                <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
-                                    <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
-                                </div>
-                                <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
-                                </div>
-                                <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 horizontal-scroll__item">
-                            <div class="horizontal-scroll_border">
-                                <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/887723/pexels-photo-887723.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-                                </div>
-                                <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
-                                </div>
-                                <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
-                                    <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
-                                </div>
-                                <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
-                                </div>
-                                <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 horizontal-scroll__item">
-                            <div class="horizontal-scroll_border">
-                                <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/285814/pexels-photo-285814.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-                                </div>
-                                <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
-                                </div>
-                                <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
-                                    <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
-                                </div>
-                                <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
-                                </div>
-                                <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 horizontal-scroll__item">
-                            <div class="horizontal-scroll_border">
-                                <div class="horizontal-scroll__image">
-                                    <img src="https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                                </div>
-                                <div class="horizontal-scroll__heading">
-                                    <h4>Lorem ipsum dolor sit amet.</h4>
-                                </div>
-                                <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">18.02.2018</span>
-                                    <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">київ</span>
-                                </div>
-                                <div class="horizontal-scroll__description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur, facere nostrum iusto, ullam impedit.</p>
-                                </div>
-                                <div class="horizontal-scroll__button clearfix">
-                                    <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="row section-button">
                         <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-9">
-                            <a href="#" class="section-button__all">всі анонси</a>
+                            <a href="{{route('announcement.archive')}}" class="section-button__all">всі анонси</a>
                         </div>
                     </div>
                 </div>

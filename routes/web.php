@@ -27,7 +27,7 @@ Auth::routes();
 //});
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
-    Route::get('/', 'DashboardController@index')->name(' index');
+    Route::get('/', 'DashboardController@index')->name('admin.index');
     Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
 Route::group(['namespace' => 'Page'], function (){
     Route::get('/announcements', 'AnnouncementController@index')->name('announcement.archive');
     Route::get('/announcements/{slug}', 'AnnouncementController@showSingle')->name('announcement.single');
+    Route::get('/news', 'NewsController@index')->name('new.archive');
+    Route::get('/news/{slug}', 'NewsController@showSingle')->name('new.single');
 });
 
 Route::get('/tag/{slug}', 'HomeController@showTag')->name('show.tag');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Announcement;
 use App\Category;
+use App\News;
 use App\Partner;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class HomeController extends Controller
     {
         $announcements =  Announcement::paginate(6);
         $partners = Partner::all();
-        return view('home', compact('announcements', 'partners'));
+        $news = News::paginate(9)->where('status', 0);
+        return view('home', compact('announcements', 'partners', 'news'));
     }
 
     public function showTag($slug)

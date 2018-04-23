@@ -5,8 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Добавить тег
-                <small>приятные слова..</small>
+                Змінити партнера
             </h1>
         </section>
         <section class="content">
@@ -22,11 +21,11 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Название</label>
+                            <label for="exampleInputEmail1">Назва</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="name" value="{{$partner->name}}">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Ссылка</label>
+                            <label for="exampleInputEmail1">Посилання</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="link" value="{{$partner->link}}">
                         </div>
                         <div class="form-group">
@@ -34,14 +33,14 @@
                             <img src="{{$partner->getImage()}}" alt="" class="img-responsive" width="200">
                             <input type="file" name="image"  id="exampleInputFile">
 
-                            <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                            <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                         </div>
                         <div class="form-group">
                             <label>
                                 {{Form::checkbox('status', '1', $partner->status, ['class'=>'minimal'])}}
                             </label>
                             <label>
-                                Черновик
+                                Чернетка
                             </label>
                         </div>
                     </div>

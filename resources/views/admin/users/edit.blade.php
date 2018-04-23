@@ -5,8 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Добавить пользователя
-                <small>приятные слова..</small>
+                Додати користувача
             </h1>
         </section>
         <section class="content">
@@ -20,7 +19,7 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Имя</label>
+                            <label for="exampleInputEmail1">Ім'я</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder=""
                                    value="{{$user->name}}">
                         </div>
@@ -39,7 +38,7 @@
                             <label for="exampleInputFile">Аватар</label>
                             <input type="file"  id="exampleInputFile" name="avatar">
 
-                            <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                            <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                         </div>
                     </div>
                 </div>

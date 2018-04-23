@@ -18,7 +18,7 @@
                     <div class="box-body">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Название</label>
+                                <label for="exampleInputEmail1">Назва</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('title')}}">
                             </div>
@@ -31,7 +31,7 @@
                                 <label for="exampleInputFile">Лицевая картинка</label>
                                 <input type="file" name="image" value="{{old('image')}}" id="exampleInputFile">
 
-                                <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                                <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Город</label>

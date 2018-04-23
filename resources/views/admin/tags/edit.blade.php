@@ -5,7 +5,7 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                Добавить тег
+                Змінити тег
             </h1>
         </section>
         <section class="content">
@@ -20,7 +20,7 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Название</label>
+                            <label for="exampleInputEmail1">Назва</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name ="title" placeholder="" value="{{$tag->title}}">
                         </div>
                     </div>

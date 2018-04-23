@@ -20,7 +20,7 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
-                        <a href="{{route('categories.create')}}" class="btn btn-success">Добавить</a>
+                        <a href="{{route('categories.create')}}" class="btn btn-success">Додати</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
