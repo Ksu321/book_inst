@@ -38,7 +38,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
 });
 
 Route::group(['namespace' => 'Page'], function (){
-    Route::get('/announcements', 'AnnouncementController@index');
+    Route::get('/announcements', 'AnnouncementController@index')->name('announcement.archive');
     Route::get('/announcements/{slug}', 'AnnouncementController@showSingle')->name('announcement.single');
 });
 
