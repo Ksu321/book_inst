@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-heading">
-                    <h3 class="section-heading__heading">Анонси</h3>
+                    <h3 class="section-heading__heading">новини</h3>
                 </div>
             </div>
             <div class="row">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="row section-button">
                         <div class="col-md-3 col-md-offset-9">
-                            <a href="{{route('announcements.index')}}" class="section-button__all">всі анонси</a>
+                            <a href="{{route('announcement.archive')}}" class="section-button__all">всі новини</a>
                         </div>
                     </div>
                 </div>

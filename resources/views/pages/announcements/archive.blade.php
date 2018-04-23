@@ -7,10 +7,7 @@
             </div>
         </div>
         @foreach($announcements as $announcement)
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row horizontal-scroll">
-                        <div class="col-md-4 horizontal-scroll__item">
+                        <div class="col-md-4 horizontal-scroll__item_archive">
                             <div class="horizontal-scroll_border">
                                 <div class="horizontal-scroll__image">
                                     <img src="{{$announcement->getImage()}}" alt="">
@@ -26,19 +23,13 @@
                                 <div class="horizontal-scroll__description">
                                     <p>{{$announcement->description}}</p>
                                 </div>
-                                <div class="horizontal-scroll__button clearfix">
+                                <div class="horizontal-scroll__button_archive clearfix">
                                     <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="row section-button">
-                        <div class="col-md-3 col-md-offset-9">
-                            <a href="#" class="section-button__all">всі новини</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         @endforeach
 
     </div>
