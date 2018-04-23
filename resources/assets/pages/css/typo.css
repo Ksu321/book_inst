@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Museo_Sans_Cyrillic; /* Имя шрифта */
+    src: url('../fonts/Museo_Sans_Cyrillic.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_100; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_100.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_100_Italic; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_100_Italic.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_300; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_300.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_300_Italic; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_300_Italic.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_500; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_500.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_500_Italic; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_500_Italic.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_700; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_700.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_700_Italic; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_700_Italic.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_900; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_900.otf'); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: MuseoSansCyrl_900_Italic; /* Имя шрифта */
+    src: url('../fonts/MuseoSansCyrl_900_Italic.otf'); /* Путь к файлу со шрифтом */
+   }
