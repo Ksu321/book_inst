@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 //
-//Auth::routes();
+Auth::routes();
 //
 //Route::get('/home', 'HomeController@index')->name('home');
 //
@@ -33,11 +33,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/users', 'UserController');
     Route::resource('/announcements', 'AnnouncementController');
     Route::resource('/partners', 'PartnerController');
+    Route::resource('/news', 'NewsController');
+    Route::resource('/booknews', 'BookNewsController');
 });
 
 Route::group(['namespace' => 'Page'], function (){
     Route::get('/announcements', 'AnnouncementController@index');
-    Route::get('/announcements/{slug}', 'AnnouncementController@showSingle');
+    Route::get('/announcements/{slug}', 'AnnouncementController@showSingle')->name('announcement.single');
 });
 
 Route::get('/tag/{slug}', 'HomeController@showTag')->name('show.tag');

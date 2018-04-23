@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-heading">
-                    <h3 class="section-heading__heading">новини</h3>
+                    <h3 class="section-heading__heading">Анонси</h3>
                 </div>
             </div>
             <div class="row">
@@ -28,7 +28,7 @@
                                     <p>{{$announcement->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
-                                    <a href="{{route('announcements.showSingle', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
+                                    <a href="{{route('announcement.single', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
                             </div>
 
@@ -38,7 +38,7 @@
                     </div>
                     <div class="row section-button">
                         <div class="col-md-3 col-md-offset-9">
-                            <a href="{{route('announcements.index')}}" class="section-button__all">всі новини</a>
+                            <a href="{{route('announcements.index')}}" class="section-button__all">всі анонси</a>
                         </div>
                     </div>
                 </div>

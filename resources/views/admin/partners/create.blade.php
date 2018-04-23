@@ -5,7 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Добавить тег
+                Додати партнера
                 <small>приятные слова..</small>
             </h1>
         </section>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label>
-                                {{Form::checkbox('status', '1', $partner->status, ['class'=>'minimal'])}}
+                                {{Form::checkbox('status', '1', null, ['class'=>'minimal'])}}
                             </label>
                             <label>
                                 Черновик
