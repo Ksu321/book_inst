@@ -10,22 +10,22 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row horizontal-scroll">
-                        @foreach($news as $new)
+                        @foreach($news as $aNews)
                         <div class="col-md-4 horizontal-scroll__item">
                             <div class="horizontal-scroll_border">
                                 <div class="horizontal-scroll__image">
-                                    <img src="{{$new->getImage()}}" alt="">
+                                    <img src="{{$aNews->getImage()}}" alt="">
                                 </div>
                                 <div class="horizontal-scroll__heading">
-                                    <h4>{{$new->title}}</h4>
+                                    <h4>{{$aNews->title}}</h4>
                                 </div>
                                 <div class="horizontal-scroll__date-and-place">
-                                    <span class="horizontal-scroll__date">{{$new->getDate()}}</span>
+                                    <span class="horizontal-scroll__date">{{$aNews->getDate()}}</span>
                                     <span class="horizontal-scroll__separator">/</span>
-                                    <span class="horizontal-scroll__place">{{$new->city}}</span>
+                                    <span class="horizontal-scroll__place">{{$aNews->city}}</span>
                                 </div>
                                 <div class="horizontal-scroll__description">
-                                    <p>{{$new->description}}</p>
+                                    <p>{{$aNews->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
                                     <a href="#" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
@@ -86,6 +86,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-heading">
@@ -95,78 +97,26 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="row vertical-scroll">
+                        @foreach($bookNews as $aBookNews)
                         <div class="col-md-12 vertical-scroll__item">
                             <div class="row">
                                 <div class="col-md-2 vertical-scroll__image-container">
                                     <div class="vertical-scroll__image">
-                                        <img src="https://book-institute.org.ua/wp-content/themes/twentyseventeen/img/news/13189_l.jpg" alt="">
+                                        <img src="{{$aBookNews->getImage()}}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-10 vertical-scroll__text-container">
                                     <div class="vertical-scroll__heading">
-                                        <h4>Маргарет Етвуд «Оповідь служниці»</h4>
+                                        <h4>{{$aBookNews->title}}</h4>
                                     </div>
                                     <div class="vertical-scroll__description">
-                                        <p>Недалеке майбутнє, на колишній території США знаходиться нова тоталітарна держава-Республіка Гілеад. Тут gравами наділені лише Командори та їхні Дружини. Останні мають право обирати для своїх чоловіків коханок, які після проходження спеціального курсу підготовки нарджують дітей...</p>
-                                        <p>Ця страхітлива антиутопія - бестселлер New York Times.</p>
+                                        <p>{{$aBookNews->description}}</p>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 vertical-scroll__item">
-                            <div class="row">
-                                <div class="col-md-2 vertical-scroll__image-container">
-                                    <div class="vertical-scroll__image">
-                                        <img src="https://book-institute.org.ua/wp-content/themes/twentyseventeen/img/news/ruine.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-10 vertical-scroll__text-container">
-                                    <div class="vertical-scroll__heading">
-                                        <h4>Маргарет Етвуд «Оповідь служниці»</h4>
-                                    </div>
-                                    <div class="vertical-scroll__description">
-                                        <p>Недалеке майбутнє, на колишній території США знаходиться нова тоталітарна держава-Республіка Гілеад. Тут gравами наділені лише Командори та їхні Дружини. Останні мають право обирати для своїх чоловіків коханок, які після проходження спеціального курсу підготовки нарджують дітей...</p>
-                                        <p>Ця страхітлива антиутопія - бестселлер New York Times.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 vertical-scroll__item">
-                            <div class="row">
-                                <div class="col-md-2 vertical-scroll__image-container">
-                                    <div class="vertical-scroll__image">
-                                        <img src="https://book-institute.org.ua/wp-content/themes/twentyseventeen/img/news/13189_l.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-10 vertical-scroll__text-container">
-                                    <div class="vertical-scroll__heading">
-                                        <h4>Маргарет Етвуд «Оповідь служниці»</h4>
-                                    </div>
-                                    <div class="vertical-scroll__description">
-                                        <p>Недалеке майбутнє, на колишній території США знаходиться нова тоталітарна держава-Республіка Гілеад. Тут gравами наділені лише Командори та їхні Дружини. Останні мають право обирати для своїх чоловіків коханок, які після проходження спеціального курсу підготовки нарджують дітей...</p>
-                                        <p>Ця страхітлива антиутопія - бестселлер New York Times.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 vertical-scroll__item">
-                            <div class="row">
-                                <div class="col-md-2 vertical-scroll__image-container">
-                                    <div class="vertical-scroll__image">
-                                        <img src="https://book-institute.org.ua/wp-content/themes/twentyseventeen/img/news/ruine.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-10 vertical-scroll__text-container">
-                                    <div class="vertical-scroll__heading">
-                                        <h4>Маргарет Етвуд «Оповідь служниці»</h4>
-                                    </div>
-                                    <div class="vertical-scroll__description">
-                                        <p>Недалеке майбутнє, на колишній території США знаходиться нова тоталітарна держава-Республіка Гілеад. Тут gравами наділені лише Командори та їхні Дружини. Останні мають право обирати для своїх чоловіків коханок, які після проходження спеціального курсу підготовки нарджують дітей...</p>
-                                        <p>Ця страхітлива антиутопія - бестселлер New York Times.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
                     </div>
                     <div class="row section-button_eight-column">
                         <div class="col-md-12">

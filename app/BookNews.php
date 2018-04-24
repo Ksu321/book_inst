@@ -15,7 +15,8 @@ class BookNews extends Model
     const IS_PUBLIC = 1;
 
     protected $fillable = ['title','content', 'date', 'description',
-        'name_book', 'author_book', 'number_page', 'gener_book', 'annotation',
+        'name_book', 'author_book', 'number_pages', 'genre_book',
+        'annotation', 'year_publish',
     ];
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Announcement;
+use App\BookNews;
 use App\Category;
 use App\News;
 use App\Partner;
@@ -19,10 +20,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $announcements =  Announcement::paginate(6);
+        $announcements =  Announcement::paginate(6)->where('status', 0);
         $partners = Partner::all();
         $news = News::paginate(9)->where('status', 0);
-        return view('home', compact('announcements', 'partners', 'news'));
+        $bookNews = BookNews::paginate(4)->where('status', 0);
+        return view('home', compact('announcements', 'partners', 'news', 'bookNews'));
     }
 
     public function showTag($slug)

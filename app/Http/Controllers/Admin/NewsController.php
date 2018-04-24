@@ -60,11 +60,11 @@ class NewsController extends Controller
             'city' => 'required',
             'image' => 'required|image',
         ]);
-        $new = News::add($request->all());
-        $new->uploadImage($request->file('image'));
-//        $new->setCategory($request->get('category_id'));
-//        $new->setTags($request->get('tags'));
-        $new->toggleStatus($request->get('status'));
+        $aNews = News::add($request->all());
+        $aNews->uploadImage($request->file('image'));
+//        $aNews->setCategory($request->get('category_id'));
+//        $aNews->setTags($request->get('tags'));
+        $aNews->toggleStatus($request->get('status'));
         return redirect()->route('news.index');
     }
 
@@ -87,12 +87,12 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        $new = News::findOrFail($id);
+        $aNews = News::findOrFail($id);
 //        $categories = Category::pluck('title', 'id')->all();
 //        $tags = Tag::pluck('title', 'id')->all();
 //        $selectedTags = $new->tags->pluck('id')->all();
         return view('admin.news.edit', compact(
-            'new'));
+            '$aNews'));
     }
 
     /**
@@ -112,12 +112,12 @@ class NewsController extends Controller
             'image' =>  'nullable|image'
         ]);
 
-        $new = News::findOrFail($id);
-        $new->edit($request->all());
-        $new->uploadImage($request->file('image'));
-//        $new->setCategory($request->get('category_id'));
-//        $new->setTags($request->get('tags'));
-        $new->toggleStatus($request->get('status'));
+        $aNews = News::findOrFail($id);
+        $aNews->edit($request->all());
+        $aNews->uploadImage($request->file('image'));
+//        $aNews->setCategory($request->get('category_id'));
+//        $aNews->setTags($request->get('tags'));
+        $aNews->toggleStatus($request->get('status'));
 
         return redirect()->route('news.index');
     }

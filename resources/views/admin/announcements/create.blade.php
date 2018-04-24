@@ -69,7 +69,7 @@
                             <!-- checkbox -->
                             <div class="form-group">
                                 <label>
-                                    <input type="checkbox" class="minimal" value="{{old('status')}}" name="status">
+                                    <input type="checkbox" class="minimal" checked value="{{old('status')}}" name="status">
                                 </label>
                                 <label>
                                     Чернетка

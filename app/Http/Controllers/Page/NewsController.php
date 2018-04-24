@@ -16,8 +16,8 @@ class NewsController extends Controller
 
     public function showSingle($slug)
     {
-        $new =  News::where('slug', $slug)->firstOrFail();
+        $aNews =  News::where('slug', $slug)->firstOrFail();
 
-        return view('pages.news.single', compact('new'));
+        return view('pages.news.single', compact('aNews'));
     }
 }

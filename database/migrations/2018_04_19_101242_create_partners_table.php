@@ -18,7 +18,7 @@ class CreatePartnersTable extends Migration
             $table->string('name');
             $table->string('link');
             $table->string('image');
-            $table->string('status');
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }

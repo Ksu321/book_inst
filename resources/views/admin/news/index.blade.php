@@ -39,19 +39,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($news as $new)
+                        @foreach($news as $aNews)
                         <tr>
-                            <td>{{$new->id}}</td>
-                            <td>{{$new->title}}</td>
+                            <td>{{$aNews->id}}</td>
+                            <td>{{$aNews->title}}</td>
                             <td></td>
                             <td></td>
                             <td>
-                                <img src="{{$new->getImage()}}" alt="" width="100">
+                                <img src="{{$aNews->getImage()}}" alt="" width="100">
                             </td>
                             <td>
-                                <a href="{{route('news.edit', $new->id)}}" class="fa fa-pencil"></a>
+                                <a href="{{route('news.edit', $aNews->id)}}" class="fa fa-pencil"></a>
 
-                                {{Form::open(['route'=>['news.destroy', $new->id], 'method'=>'delete'])}}
+                                {{Form::open(['route'=>['news.destroy', $aNews->id], 'method'=>'delete'])}}
                                 <button onclick="return confirm('Ви дійсно хочете видалити цью новину?')" type="submit" class="delete">
                                     <i class="fa fa-remove"></i>
                                 </button>

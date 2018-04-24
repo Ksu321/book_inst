@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +10,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+
 //
-Auth::routes();
 //
 //Route::get('/home', 'HomeController@index')->name('home');
 //
@@ -26,8 +24,15 @@ Auth::routes();
 //    Route::get('/', 'DashboardController@index');
 //});
 
+Route::get('/', 'HomeController@index');
+
+Auth::routes();
+
+//admin panel
+
+
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
-    Route::get('/', 'DashboardController@index')->name('admin.index');
+    Route::get('/', 'DashboardController@index')->name(' index');
     Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
@@ -36,6 +41,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/news', 'NewsController');
     Route::resource('/booknews', 'BookNewsController');
 });
+
+
+//page
+
 
 Route::group(['namespace' => 'Page'], function (){
     Route::get('/announcements', 'AnnouncementController@index')->name('announcement.archive');

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBooknewsTable extends Migration
+class CreateBookNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,21 @@ class CreateBooknewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('booknews', function (Blueprint $table) {
+        Schema::create('book_news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('description');
             $table->string('slug');
-            $table->string('content');
             $table->string('image');
-            $table->string('name_book');
-            $table->string('author_book');
-            $table->string('number_page');
+            $table->string('name_book')->nullable();
+            $table->string('author_book')->nullable();
+            $table->string('number_pages')->nullable();
+            $table->integer('year_publish')->nullable();
             $table->date('date')->nullable();
-            $table->string('gener_book');
+            $table->string('genre_book')->nullable();
             $table->string('annotation');
             $table->integer('user_id')->nullable();
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }
@@ -39,6 +39,6 @@ class CreateBooknewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booknews');
+        Schema::dropIfExists('book_news');
     }
 }

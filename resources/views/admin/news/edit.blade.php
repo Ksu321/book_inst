@@ -11,7 +11,7 @@
         </section>
         <section class="content">
             {{Form::open([
-                            'route'	=>	['news.update', $new->id],
+                            'route'	=>	['news.update', $aNews->id],
                             'files'	=>	true,
                             'method'	=>	'put'
 	                ])}}
@@ -26,15 +26,15 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Название</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$new->title}}">
+                                       placeholder="" value="{{$aNews->title}}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Описание</label>
                                 <textarea class="form-control" name="description" rows="4" cols="45"
-                                          style="resize: none">{{$new->description}}</textarea>
+                                          style="resize: none">{{$aNews->description}}</textarea>
                             </div>
                             <div class="form-group">
-                                <img src="{{$new->getImage()}}" alt="" class="img-responsive" width="200">
+                                <img src="{{$aNews->getImage()}}" alt="" class="img-responsive" width="200">
                                 <label for="exampleInputFile">Лицевая картинка</label>
                                 <input type="file" id="exampleInputFile" name="image">
 
@@ -43,7 +43,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Город</label>
                                 <input type="text" name="city" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$new->city}}">
+                                       placeholder="" value="{{$aNews->city}}">
                             </div>
 
                             <div class="form-group">
@@ -53,12 +53,12 @@
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <input type="text" class="form-control pull-right" id="datepicker" name="date"
-                                           value="{{$new->date}}">
+                                           value="{{$aNews->date}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>
-                                    {{Form::checkbox('status', '1', $new->status, ['class'=>'minimal'])}}
+                                    {{Form::checkbox('status', '1', $aNews->status, ['class'=>'minimal'])}}
                                 </label>
                                 <label>
                                     Черновик
@@ -69,7 +69,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Текст анонсов</label>
                                 <textarea name="content" id="" cols="30" rows="10" class="form-control"
-                                          style="resize: none">{{$new->content}}</textarea>
+                                          style="resize: none">{{$aNews->content}}</textarea>
                             </div>
                         </div>
                     </div>
