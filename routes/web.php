@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/partners', 'PartnerController');
     Route::resource('/news', 'NewsController');
     Route::resource('/booknews', 'BookNewsController');
+    Route::resource('/author', 'AuthorController');
+    Route::resource('/illustrator', 'IllustratorController');
 });
 
 
