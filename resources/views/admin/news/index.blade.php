@@ -32,7 +32,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Название</th>
-                            <th>Категория</th>
+                            <th>Категорія</th>
                             <th>Теги</th>
                             <th>Картинка</th>
                             <th>Действия</th>
@@ -44,7 +44,7 @@
                             <td>{{$aNews->id}}</td>
                             <td>{{$aNews->title}}</td>
                             <td></td>
-                            <td></td>
+                            <td>{{$aNews->getTagsTitles()}}</td>
                             <td>
                                 <img src="{{$aNews->getImage()}}" alt="" width="100">
                             </td>

@@ -25,12 +25,11 @@ class NewsController extends Controller
     {
         $news = News::all();
 //        $categories = Category::pluck('title', 'id')->all();
-//        $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.news.index', [
-            'news' => $news,
-//            'categories' => $categories,
-//            'tags' => $tags,
-        ]);
+        $tags = Tag::pluck('title', 'id')->all();
+        return view('admin.news.index', compact(
+            'news',
+            'tags'
+        ));
     }
 
     /**
@@ -40,8 +39,8 @@ class NewsController extends Controller
      */
     public function create()
     {
-
-        return view('admin.news.create');
+        $tags = Tag::pluck('title', 'id')->all();
+        return view('admin.news.create', compact('tags'));
     }
 
     /**
@@ -63,7 +62,7 @@ class NewsController extends Controller
         $aNews = News::add($request->all());
         $aNews->uploadImage($request->file('image'));
 //        $aNews->setCategory($request->get('category_id'));
-//        $aNews->setTags($request->get('tags'));
+        $aNews->setTags($request->get('tags'));
         $aNews->toggleStatus($request->get('status'));
         return redirect()->route('news.index');
     }
@@ -89,10 +88,13 @@ class NewsController extends Controller
     {
         $aNews = News::findOrFail($id);
 //        $categories = Category::pluck('title', 'id')->all();
-//        $tags = Tag::pluck('title', 'id')->all();
-//        $selectedTags = $new->tags->pluck('id')->all();
+        $tags = Tag::pluck('title', 'id')->all();
+        $selectedTags = $aNews->tags->pluck('id')->all();
         return view('admin.news.edit', compact(
-            '$aNews'));
+            'aNews',
+            'tags',
+            'selectedTags'
+            ));
     }
 
     /**
@@ -116,7 +118,7 @@ class NewsController extends Controller
         $aNews->edit($request->all());
         $aNews->uploadImage($request->file('image'));
 //        $aNews->setCategory($request->get('category_id'));
-//        $aNews->setTags($request->get('tags'));
+        $aNews->setTags($request->get('tags'));
         $aNews->toggleStatus($request->get('status'));
 
         return redirect()->route('news.index');

@@ -38,7 +38,7 @@
                     </div>
                     <div class="row section-button">
                         <div class="col-md-3 col-md-offset-9">
-                            <a href="{{route('announcement.archive')}}" class="section-button__all">всі новини</a>
+                            <a href="#" class="section-button__all">всі новини</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                                     <p>{{$announcement->description}}</p>
                                 </div>
                                 <div class="horizontal-scroll__button clearfix">
-                                    <a href="{{route('announcement.single', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
+                                    <a href="{{route('announcements.single', $announcement->slug)}}" class="horizontal-scroll__button-more"><span class="glyphicon glyphicon-menu-right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="row section-button">
                         <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-9">
-                            <a href="{{route('announcement.archive')}}" class="section-button__all">всі анонси</a>
+                            <a href="{{route('announcements.archive')}}" class="section-button__all">всі анонси</a>
                         </div>
                     </div>
                 </div>

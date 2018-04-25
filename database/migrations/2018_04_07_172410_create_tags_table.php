@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnnouncementTagsTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateAnnouncementTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('announcement_tags', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('announcement_id');
-            $table->integer('tag_id');
+            $table->string('title');
+            $table->string('slug');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateAnnouncementTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('announcement_tags');
+        Schema::dropIfExists('tags');
     }
 }

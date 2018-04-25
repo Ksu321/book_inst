@@ -32,7 +32,7 @@
                             <tr>
                                 <td>{{$aBookNews->id}}</td>
                                 <td>{{$aBookNews->title}}</td>
-                                <td>тег</td>
+                            <td>{{$aBookNews->getTagsTitles()}}</td>
 
                                 <td>
                                     <img src="{{$aBookNews->getImage()}}" alt="" width="100">

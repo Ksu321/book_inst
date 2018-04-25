@@ -28,12 +28,7 @@ class Announcement extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(
-            Tag::class,
-            'announcement_tags',
-            'announcement_id',
-            'tag_id'
-        );
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     public function sluggable()
@@ -127,7 +122,6 @@ class Announcement extends Model
         {
             return $this->setDraft();
         }
-
         return $this->setPublic();
     }
 

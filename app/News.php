@@ -17,6 +17,10 @@ class News extends Model
     protected $fillable = ['title','content', 'date', 'description', 'city'];
 
 
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
 
     public function author()
     {
@@ -118,5 +122,18 @@ class News extends Model
     public function getDate()
     {
         return Carbon::createFromFormat('d/m/y', $this->date)->format('d.m.Y');
+    }
+
+    public function setTags($ids)
+    {
+        if ($ids == null) { return;}
+        $this->tags()->sync($ids);
+    }
+
+    public function getTagsTitles()
+    {
+        return (!$this->tags->isEmpty())
+            ?   implode(', ', $this->tags->pluck('title')->all())
+            : 'Теги відсутні';
     }
 }

@@ -9,7 +9,7 @@ class AnnouncementController extends Controller
 {
     public function index()
     {
-        $announcements =  Announcement::paginate(9)->where('status', 1);
+        $announcements =  Announcement::where('status', 0)->paginate(9);
         return view('pages.announcements.archive', compact('announcements'));
     }
 

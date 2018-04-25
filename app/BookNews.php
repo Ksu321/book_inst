@@ -19,13 +19,16 @@ class BookNews extends Model
         'annotation', 'year_publish',
     ];
 
-
-
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
 
     public function sluggable()
     {
@@ -121,5 +124,18 @@ class BookNews extends Model
     public function getDate()
     {
         return Carbon::createFromFormat('d/m/y', $this->date)->format('d.m.Y');
+    }
+
+    public function setTags($ids)
+    {
+        if ($ids == null) { return;}
+        $this->tags()->sync($ids);
+    }
+
+    public function getTagsTitles()
+    {
+        return (!$this->tags->isEmpty())
+            ?   implode(', ', $this->tags->pluck('title')->all())
+            : 'Теги відсутні';
     }
 }
