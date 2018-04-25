@@ -4,7 +4,7 @@
             <div class="col-md-12 top-part">
                 <div class="row">
                     <div class="col-md-6 logo">
-                        <a href="#" class="logo__link">
+                        <a href="/" class="logo__link">
                             <img src="/img/logo.svg" alt="logo" class="logo__image">
                         </a>
                     </div>

@@ -13,7 +13,11 @@ class Category extends Model
 
     public function announcements()
     {
-        return $this->hasMany(Announcement::class);
+        return $this->hasMany(
+            Announcement::class,
+            News::class,
+            BookNews::class
+            );
     }
 
     public function sluggable()

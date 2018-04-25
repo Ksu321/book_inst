@@ -53,7 +53,8 @@ class BookNewsController extends Controller
         return view('admin.booknews.edit', compact(
             'aBookNews',
             'tags',
-            'selectedTags'
+            'selectedTags',
+            'categories'
         ));
     }
 

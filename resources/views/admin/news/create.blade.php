@@ -38,7 +38,14 @@
                                 <input type="text" name="city" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('city')}}">
                             </div>
-
+                            <div class="form-group">
+                                <label>Категорія</label>
+                                {{Form::select('category_id',
+                                    $categories,
+                                    null,
+                                    ['class' => 'form-control select2'])
+                                }}
+                            </div>
                             <div class="form-group">
                                 <label>Теги</label>
                                 {{Form::select('tags[]',

@@ -70,6 +70,7 @@
                                        placeholder="" value="{{old('genre_book')}}">
                             </div>
 
+
                             <div class="form-group">
                                 <label>Теги</label>
                                 {{Form::select('tags[]',

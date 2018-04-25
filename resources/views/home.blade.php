@@ -120,7 +120,7 @@
                     </div>
                     <div class="row section-button_eight-column">
                         <div class="col-md-12">
-                            <a href="#" class="section-button_eight-column__all">всі анонси</a>
+                            <a href="#" class="section-button_eight-column__all">всі книжкові новини</a>
                         </div>
                     </div>
                 </div>

@@ -43,7 +43,7 @@
                         <tr>
                             <td>{{$aNews->id}}</td>
                             <td>{{$aNews->title}}</td>
-                            <td></td>
+                            <td>{{$aNews->getCategoryTitle()}}</td>
                             <td>{{$aNews->getTagsTitles()}}</td>
                             <td>
                                 <img src="{{$aNews->getImage()}}" alt="" width="100">

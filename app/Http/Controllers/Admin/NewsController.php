@@ -24,11 +24,12 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::all();
-//        $categories = Category::pluck('title', 'id')->all();
+        $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
         return view('admin.news.index', compact(
             'news',
-            'tags'
+            'tags',
+            'categories'
         ));
     }
 
@@ -39,8 +40,12 @@ class NewsController extends Controller
      */
     public function create()
     {
+        $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.news.create', compact('tags'));
+        return view('admin.news.create', compact(
+            'tags',
+            'categories'
+            ));
     }
 
     /**
@@ -61,7 +66,7 @@ class NewsController extends Controller
         ]);
         $aNews = News::add($request->all());
         $aNews->uploadImage($request->file('image'));
-//        $aNews->setCategory($request->get('category_id'));
+        $aNews->setCategory($request->get('category_id'));
         $aNews->setTags($request->get('tags'));
         $aNews->toggleStatus($request->get('status'));
         return redirect()->route('news.index');
@@ -87,13 +92,14 @@ class NewsController extends Controller
     public function edit($id)
     {
         $aNews = News::findOrFail($id);
-//        $categories = Category::pluck('title', 'id')->all();
+        $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
         $selectedTags = $aNews->tags->pluck('id')->all();
         return view('admin.news.edit', compact(
             'aNews',
             'tags',
-            'selectedTags'
+            'selectedTags',
+            'categories'
             ));
     }
 
@@ -117,7 +123,7 @@ class NewsController extends Controller
         $aNews = News::findOrFail($id);
         $aNews->edit($request->all());
         $aNews->uploadImage($request->file('image'));
-//        $aNews->setCategory($request->get('category_id'));
+        $aNews->setCategory($request->get('category_id'));
         $aNews->setTags($request->get('tags'));
         $aNews->toggleStatus($request->get('status'));
 
@@ -133,7 +139,6 @@ class NewsController extends Controller
     public function destroy($id)
     {
         News::findOrFail($id)->remove();
-
         return redirect()->route('news.index');
     }
 

@@ -21,8 +21,7 @@
                             <th>ID</th>
                             <th>Назва новини</th>
                             <th>Теги</th>
-                            <th>Картинка</th>
-
+                            <th>Категорія</th>
                             <th>Автор</th>
                             <th>Дія</th>
                         </tr>
@@ -33,7 +32,6 @@
                                 <td>{{$aBookNews->id}}</td>
                                 <td>{{$aBookNews->title}}</td>
                             <td>{{$aBookNews->getTagsTitles()}}</td>
-
                                 <td>
                                     <img src="{{$aBookNews->getImage()}}" alt="" width="100">
                                 </td>

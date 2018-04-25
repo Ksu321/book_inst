@@ -17,6 +17,11 @@ class News extends Model
     protected $fillable = ['title','content', 'date', 'description', 'city'];
 
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function tags()
     {
         return $this->morphToMany(Tag::class, 'taggable');
@@ -135,5 +140,24 @@ class News extends Model
         return (!$this->tags->isEmpty())
             ?   implode(', ', $this->tags->pluck('title')->all())
             : 'Теги відсутні';
+    }
+
+    public function setCategory($id)
+    {
+        if ($id ==null ) { return;}
+        $this->category_id = $id;
+        $this->save();
+    }
+
+    public function getCategoryTitle()
+    {
+        return ($this->category != null)
+            ?   $this->category->title
+            :   'Категорія відсутня';
+    }
+
+    public function getCategoryID()
+    {
+        return $this->category != null ? $this->category->id : 'Нет категории';
     }
 }

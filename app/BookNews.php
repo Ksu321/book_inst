@@ -19,6 +19,7 @@ class BookNews extends Model
         'annotation', 'year_publish',
     ];
 
+
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -138,4 +139,5 @@ class BookNews extends Model
             ?   implode(', ', $this->tags->pluck('title')->all())
             : 'Теги відсутні';
     }
+
 }
