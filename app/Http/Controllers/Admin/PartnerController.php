@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Partner;
+use App\Model\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -52,7 +52,7 @@ class PartnerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Partner  $partner
+     * @param  \App\Model\Partner  $partner
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -63,7 +63,7 @@ class PartnerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Partner  $partner
+     * @param  \App\Model\Partner   $partner
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -76,7 +76,7 @@ class PartnerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Partner  $partner
+     * @param  \App\Model\Partner   $partner
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -100,7 +100,7 @@ class PartnerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Partner  $partner
+     * @param  \App\Model\Partner   $partner
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Announcement;
-use App\BookNews;
-use App\Category;
-use App\News;
-use App\Partner;
-use App\Tag;
+
+use App\Model\Actual\Announcement;
+use App\Model\Actual\BookNews;
+use App\Model\Actual\News;
+use App\Model\Category;
+use App\Model\Partner;
+use App\Model\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

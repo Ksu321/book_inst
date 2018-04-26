@@ -36,23 +36,33 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
-    Route::resource('/announcements', 'AnnouncementController');
     Route::resource('/partners', 'PartnerController');
-    Route::resource('/news', 'NewsController');
-    Route::resource('/booknews', 'BookNewsController');
-    Route::resource('/author', 'AuthorController');
-    Route::resource('/illustrator', 'IllustratorController');
+
+    Route::group(['namespace' => 'Actual'], function (){
+        Route::resource('/announcements', 'AnnouncementController');
+        Route::resource('/news', 'NewsController');
+        Route::resource('/booknews', 'BookNewsController');
+    });
+
+    Route::group(['namespace' => 'Authors'], function (){
+        Route::resource('/authors', 'AuthorController');
+        Route::resource('/illustrators', 'IllustratorController');
+    });
+
+    Route::group(['namespace' => 'BookShop'], function (){});
 });
 
 
 //page
 
-
 Route::group(['namespace' => 'Page'], function (){
-    Route::get('/announcements', 'AnnouncementController@index')->name('announcements.archive');
-    Route::get('/announcements/{slug}', 'AnnouncementController@showSingle')->name('announcements.single');
-    Route::get('/news', 'NewsController@index')->name('new.archive');
-    Route::get('/news/{slug}', 'NewsController@showSingle')->name('new.single');
+    Route::group(['namespace' => 'Actual'], function (){
+        Route::get('/announcements', 'AnnouncementController@index')->name('announcements.archive');
+        Route::get('/announcements/{slug}', 'AnnouncementController@showSingle')->name('announcements.single');
+        Route::get('/news', 'NewsController@index')->name('new.archive');
+        Route::get('/news/{slug}', 'NewsController@showSingle')->name('new.single');
+    });
+
 });
 
 Route::get('/tag/{slug}', 'HomeController@showTag')->name('show.tag');
