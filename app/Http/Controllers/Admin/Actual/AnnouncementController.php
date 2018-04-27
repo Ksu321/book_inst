@@ -136,7 +136,7 @@ class AnnouncementController extends Controller
     public function destroy($id)
     {
         Announcement::findOrFail($id)->remove();
-        return redirect()->route('posts.index');
+        return redirect()->route('announcements.index');
     }
 
 

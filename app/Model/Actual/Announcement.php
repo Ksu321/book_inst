@@ -2,6 +2,9 @@
 
 namespace App\Model\Actual;
 
+use App\Model\Category;
+use App\Model\Tag;
+use App\Model\User;
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +24,7 @@ class Announcement extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function author()
+    public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }

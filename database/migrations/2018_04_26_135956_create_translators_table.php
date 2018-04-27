@@ -19,8 +19,6 @@ class CreateTranslatorsTable extends Migration
             $table->string('biography')->nullable();
             $table->string('publish_id')->nullable();
             $table->string('book_id')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
             $table->string('address_url')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();

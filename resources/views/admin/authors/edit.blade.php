@@ -5,120 +5,94 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Изменить статью
-                <small>приятные слова..</small>
+                Редагувати письменника
+                <small></small>
             </h1>
         </section>
+
+        <!-- Main content -->
         <section class="content">
-            {{Form::open([
-                            'route'	=>	['booknews.update', $aBookNews->id],
-                            'files'	=>	true,
-                            'method'	=>	'put'
-	                ])}}
-            <section class="content">
-                <div class="box">
-                    <div class="box-header with-border">
-                        @include('admin.errors')
-                    </div>
-                    <div class="box-body">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Назва новини</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$aBookNews->title}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Опис новини</label>
-                                <textarea class="form-control" name="description" rows="4" cols="45"
-                                          style="resize: none">{{$aBookNews->description}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <img src="{{$aBookNews->getImage()}}" alt="" class="img-responsive" width="200">
-                                <label for="exampleInputFile">Лицьова картинка</label>
-                                <input type="file" id="exampleInputFile" name="image">
 
-                                <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Назва книги</label>
-                                <input type="text" name="name_book" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$aBookNews->name_book}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Автор книги</label>
-                                <input type="text" name="author_book" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$aBookNews->author_book}}">
-                            </div>
-
-                            <div class="form-group">
-
-                                <label>Рік видання книги:</label>
-
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker" name="year_publish"
-                                           value="{{$aBookNews->year_publish}}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Кількість сторінок</label>
-                                <input type="text" name="number_pages" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$aBookNews->number_pages}}">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Жанр книги</label>
-                                <input type="text" name="genre_book" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$aBookNews->genre_book}}">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Теги</label>
-                                {{Form::select('tags[]',
-                                    $tags,
-                                    $selectedTags,
-                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть теги'])
-                                }}
-                            </div>
-
-                            <div class="form-group">
-
-                                <label>Дата:</label>
-
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker" name="date"
-                                           value="{{$aBookNews->date}}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    {{Form::checkbox('status', '1', $aBookNews->status, ['class'=>'minimal'])}}
-                                </label>
-                                <label>
-                                    Чернетка
-                                </label>
-                            </div>
+        {{Form::open([
+                        'route'	=>	['authors.update', $author->id],
+                        'files'	=>	true,
+                        'method'	=>	'put'
+                ])}}
+            <!-- Default box -->
+            <div class="box">
+                <div class="box-header with-border">
+                    @include('admin.errors')
+                </div>
+                <div class="box-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Псевдонім/Ім’я письменника</label>
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="" value="{{$author->name}}">
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Анотація до книги</label>
-                                <textarea name="annotation" id="" cols="30" rows="10" class="form-control"
-                                          style="resize: none">{{$aBookNews->annotation}}</textarea>
+
+                        <div class="form-group">
+                            <img src="{{$author->getImage()}}" alt="" class="img-responsive" width="200">
+                            <label for="exampleInputFile">Фото</label>
+                            <input type="file" name="image" id="exampleInputFile">
+                            <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
+                        </div>
+                        <!-- Date -->
+
+                        <!-- checkbox -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Видавництва</label>
+                            <input type="text"  class="form-control" id="" placeholder="" value="Demo, demo, demo">
+                            <label for="exampleInputEmail1">Усі книжки</label>
+                            <input type="text" class="form-control" id="" placeholder="" value="Demo, demo">
+                        </div>
+
+                        <!-- contacts -->
+                        <div class="form-group">
+                            <label>Контакти:</label>
+
+                            <div class="input-group" style="width: 100%;">
+                                <div class="input-group-addon" style="width: 50px;">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <input type="text" name="phone"  class="form-control" value="{{$author->phone}}" data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="(___) ___-____">
                             </div>
+                            <div class="input-group" style="width: 100%;">
+                                <span class="input-group-addon" style="width: 50px;"><i class="fa fa-envelope"></i></span>
+                                <input type="email" name="email" class="form-control" placeholder="Email" value="{{$author->email}}">
+                            </div>
+                            <div class="input-group" style="width: 100%;">
+                                <span class="input-group-addon" style="width: 50px;"><i class="fa fa-desktop"></i></span>
+                                <input type="text" class="form-control" placeholder="Website" value="{{$author->address_url}}">
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- contacts -->
+                        <div class="form-group">
+                            <label>
+                                {{Form::checkbox('status', '1', $author->status, ['class'=>'minimal'])}}
+                            </label>
+                            <label>
+                                Чернетка
+                            </label>
                         </div>
                     </div>
-                    <div class="box-footer">
-                        <a href="{{route('booknews.index')}}" class="btn btn-default"> Назад</a>
-                        <button class="btn btn-success pull-right">Додати</button>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Біографія</label>
+                            <textarea name="biography" id="" cols="30" rows="10" class="form-control" style="resize: none">{{$author->biography}}</textarea>
+                        </div>
                     </div>
                 </div>
-            {{Form::close()}}
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <a href="{{route('authors.index')}}" class="btn btn-default"> Назад</a>
+                    <button class="btn btn-success pull-right">Додати</button>
+                </div>
+                <!-- /.box-footer-->
+            </div>
+{{Form::close()}}
         </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 @endsection

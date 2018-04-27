@@ -30,7 +30,7 @@ class News extends Model
         return $this->morphToMany(Tag::class, 'taggable');
     }
 
-    public function author()
+    public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }

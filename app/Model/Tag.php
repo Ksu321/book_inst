@@ -2,6 +2,9 @@
 
 namespace App\Model;
 
+use App\Model\Actual\Announcement;
+use App\Model\Actual\BookNews;
+use App\Model\Actual\News;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 

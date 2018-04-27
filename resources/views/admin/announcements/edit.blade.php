@@ -16,7 +16,6 @@
 	                ])}}
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Оновлюємо анонс</h3>
                         @include('admin.errors')
                     </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Model\Actual\Announcement;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
