@@ -26,8 +26,7 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Ім'я</th>
-                            <th>Жанри</th>
+                            <th>Імʼя/псевдонім</th>
                             <th>Книжки</th>
                             <th>Видавництва</th>
                             <th>Фото</th>
@@ -39,18 +38,16 @@
                         <tr>
                             <td>{{$illustrator->id}}</td>
                             <td>{{$illustrator->name}}</td>
-                            <td>{{$illustrator->genre}}</td>
                             <td>{{$illustrator->books}}</td>
                             <td>test</td>
-                            <td><img src="../../../assets/dist/img/photo1.png" alt="" width="100"></td></td>
+                            <td><img src="{{$illustrator->getImage()}}" alt="" width="100"></td></td>
                             <td>
                                 <a href="{{route('illustrators.edit', $illustrator->id)}}" class="fa fa-pencil"></a>
-                                <form action="{{route('illustrators.destroy', $illustrator->id)}}" method="POST">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button onclick="return confirm('Ви дійсно хочете видалити цього ілюстратора?')" type="submit" class="delete">
-                                        <i class="fa fa-remove"></i>
-                                    </button>
-                                </form>
+                                {{Form::open(['route'=>['illustrators.destroy', $illustrator->id], 'method'=>'delete'])}}
+                                <button onclick="return confirm('Ви дійсно хочете видалити цього ілюстратора?')" type="submit" class="delete">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                                {{Form::close()}}
                             </td>
                         </tr>
                         @endforeach

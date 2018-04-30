@@ -38,14 +38,12 @@
                                 <td>{{$aBookNews->author_book}}</td>
                                 <td>
                                     <a href="{{route('booknews.edit', $aBookNews->id)}}" class="fa fa-pencil"></a>
-                                    <form action="{{route('booknews.destroy', $aBookNews->id)}}" method="POST">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button onclick="return confirm('Ви дійсно хочете видалити цю книжкову новину?')" type="submit" class="delete">
-                                            <i class="fa fa-remove"></i>
-                                        </button>
-                                    </form>
+                                    {{Form::open(['route'=>['booknews.destroy', $aBookNews->id], 'method'=>'delete'])}}
+                                    <button onclick="return confirm('Ви дійсно хочете видалити цю книжкову новину?')" type="submit" class="delete">
+                                        <i class="fa fa-remove"></i>
+                                    </button>
+                                    {{Form::close()}}
                                 </td>
-
                             </tr>
                         @endforeach
                         </tfoot>

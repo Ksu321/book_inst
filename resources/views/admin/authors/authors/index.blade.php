@@ -43,12 +43,11 @@
                             <td><img src="{{$author->getImage()}}" alt="" width="100"></td></td>
                             <td>
                                 <a href="{{route('authors.edit', $author->id)}}" class="fa fa-pencil"></a>
-                                <form action="{{route('authors.destroy', $author->id)}}" method="POST">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button onclick="return confirm('Ви дійсно хочете видалити цього автора?')" type="submit" class="delete">
-                                        <i class="fa fa-remove"></i>
-                                    </button>
-                                </form>
+                                {{Form::open(['route'=>['authors.destroy', $author->id], 'method'=>'delete'])}}
+                                <button onclick="return confirm('Ви дійсно хочете видалити цього автора?')" type="submit" class="delete">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                                {{Form::close()}}
                             </td>
                         </tr>
                         @endforeach

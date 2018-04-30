@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Storage;
 class Illustrator extends BaseModel
 {
 
+    protected $fillable = ['name', 'email', 'biography', 'address_url', 'phone', 'image'];
+
+
+
     public function remove()
     {
         $this->removeImage();
@@ -23,8 +27,6 @@ class Illustrator extends BaseModel
         $image->storeAs('uploads/articles/illustrators/', $filename);
         $this->image = $filename;
         $this->save();
-
-
     }
 
     public function removeImage()
@@ -40,4 +42,5 @@ class Illustrator extends BaseModel
         if ($this->image == null) { return 'img/no-img.png'; }
         return '/uploads/articles/illustrators/' . $this->image;
     }
+
 }

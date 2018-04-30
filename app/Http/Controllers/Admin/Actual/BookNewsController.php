@@ -15,7 +15,7 @@ class BookNewsController extends Controller
     {
         $bookNews = BookNews::all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.booknews.index', compact(
+        return view('admin.actual.booknews.index', compact(
             'bookNews',
             'tags'
         ));
@@ -24,7 +24,7 @@ class BookNewsController extends Controller
     public function create()
     {
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.booknews.create', compact(
+        return view('admin.actual.booknews.create', compact(
             'tags'
         ));
     }
@@ -51,7 +51,7 @@ class BookNewsController extends Controller
         $aBookNews = BookNews::findOrFail($id);
         $tags = Tag::pluck('title', 'id')->all();
         $selectedTags = $aBookNews->tags->pluck('id')->all();
-        return view('admin.booknews.edit', compact(
+        return view('admin.actual.booknews.edit', compact(
             'aBookNews',
             'tags',
             'selectedTags',

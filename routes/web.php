@@ -49,7 +49,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
         Route::resource('/illustrators', 'IllustratorController');
     });
 
-    Route::group(['namespace' => 'BookShop'], function (){});
+    Route::group(['namespace' => 'BookShop'], function (){
+        Route::resource('/publishing', 'PublishingController');
+    });
 });
 
 

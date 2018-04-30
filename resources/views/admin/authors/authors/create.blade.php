@@ -12,8 +12,10 @@
 
         <!-- Main content -->
         <section class="content">
-            <form action="{{route('authors.store')}}" id="form" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            {{Form::open([
+		'route'	=> 'authors.store',
+		'files'	=>	true
+	])}}
             <div class="box">
                 <div class="box-header with-border">
                     @include('admin.errors')
@@ -70,7 +72,7 @@
                         </div>
                         <div class="form-group">
                             <label>
-                                <input type="checkbox" class="minimal" name="status" value="{{old('status')}}" checked>
+                                <input type="checkbox" class="minimal" name="status"  checked>
                             </label>
                             <label>
                                 Чернетка
@@ -91,7 +93,7 @@
                 </div>
                 <!-- /.box-footer-->
             </div>
-            </form>
+            {{Form::close()}}
         </section>
     </div>
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePublishingHousesTable extends Migration
+class CreatePublishingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePublishingHousesTable extends Migration
      */
     public function up()
     {
-        Schema::create('publishing_houses', function (Blueprint $table) {
+        Schema::create('publishings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
-            $table->string('content')->nullable();
+            $table->string('description')->nullable();
             $table->string('image')->nullable();
+            $table->string('city')->nullable();
+            $table->integer('specialism_id')->nullable();
             $table->string('reward')->nullable();
             $table->string('prize')->nullable();
             $table->string('address')->nullable();
@@ -39,6 +40,6 @@ class CreatePublishingHousesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publishing_houses');
+        Schema::dropIfExists('publishings');
     }
 }

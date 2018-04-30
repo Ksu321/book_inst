@@ -1,26 +1,24 @@
 <?php
 
 
-namespace App\Http\Controllers\Admin\Authors;
-
+namespace App\Http\Controllers\Admin\BookShop;
 
 use App\Http\Controllers\Controller;
-use App\Model\Authors\Author;
+use App\Model\BookShop\Publishing;
 use Illuminate\Http\Request;
 
 
-class AuthorController extends Controller
+class PublishingController extends Controller
 {
-
     public function index()
     {
-        $authors = Author::all();
-        return view('admin.actual.authors.index', compact('authors'));
+        $publishings = Publishing::all();
+        return view('admin.bookshop.publishing.index', compact('publishings'));
     }
 
     public function create()
     {
-        return view('admin.actual.authors.create');
+        return view('admin.bookshop.publishing.create');
     }
 
     public function store(Request $request)
@@ -28,17 +26,16 @@ class AuthorController extends Controller
         $this->validate($request,[
             'name' => 'required',
         ]);
-
-        $author = Author::add($request->all());
+        $author = Publishing::add($request->all());
         $author->uploadImage($request->file('image'));
         $author->toggleStatus($request->get('status'));
-        return redirect()->route('authors.index');
+        return redirect()->route('publishing.index');
     }
 
     public function edit($id)
     {
-        $author = Author::findOrFail($id);
-        return view('admin.actual.authors.edit', compact('author'));
+        $publish = Publishing::findOrFail($id);
+        return view('admin.bookshop.publishing.edit', compact('publish'));
     }
 
     public function update(Request $request, $id)
@@ -46,16 +43,11 @@ class AuthorController extends Controller
         $this->validate($request, [
             'name' =>'required'
         ]);
-        $author = Author::findOrFail($id);
+        $author = Publishing::findOrFail($id);
         $author->edit($request->all());
         $author->uploadImage($request->file('image'));
         $author->toggleStatus($request->get('status'));
-        return redirect()->route('authors.index');
+        return redirect()->route('publishing.index');
     }
 
-    public function destroy($id)
-    {
-        Author::findOrFail($id)->remove();
-        return redirect()->route('authors.index');
-    }
 }

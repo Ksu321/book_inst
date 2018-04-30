@@ -23,7 +23,7 @@ class AnnouncementController extends Controller
         $announcements = Announcement::all();
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.announcements.index', [
+        return view('admin.actual.announcements.index', [
             'announcements' => $announcements,
             'categories' => $categories,
             'tags' => $tags,
@@ -39,7 +39,7 @@ class AnnouncementController extends Controller
     {
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.announcements.create', [
+        return view('admin.actual.announcements.create', [
             'categories' => $categories,
             'tags' => $tags
         ]);
@@ -92,7 +92,7 @@ class AnnouncementController extends Controller
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
         $selectedTags = $announcement->tags->pluck('id')->all();
-        return view('admin.announcements.edit', compact(
+        return view('admin.actual.announcements.edit', compact(
             'categories',
             'tags',
             'announcement',

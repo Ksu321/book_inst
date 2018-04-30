@@ -5,11 +5,13 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Додати новину
+                Додати анонс
             </h1>
         </section>
-        <form action="{{route('news.store')}}" id="form" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        {{Form::open([
+		'route'	=> 'announcements.store',
+		'files'	=>	true
+	])}}
             <section class="content">
                 <div class="box">
                     <div class="box-header with-border">
@@ -28,13 +30,13 @@
                                           style="resize: none">{{old('description')}}</textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputFile">Лицевая картинка</label>
+                                <label for="exampleInputFile">Лицьова картинка</label>
                                 <input type="file" name="image" value="{{old('image')}}" id="exampleInputFile">
 
                                 <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Город</label>
+                                <label for="exampleInputEmail1">Місто</label>
                                 <input type="text" name="city" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('city')}}">
                             </div>
@@ -69,16 +71,16 @@
                             <!-- checkbox -->
                             <div class="form-group">
                                 <label>
-                                    <input type="checkbox" class="minimal" value="{{old('status')}}" name="status">
+                                    <input type="checkbox" class="minimal" checked  name="status">
                                 </label>
                                 <label>
-                                    Черновик
+                                    Чернетка
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Текст анонсов</label>
+                                <label for="exampleInputEmail1">Текст анонса</label>
                                 <textarea name="content" id="" cols="30" rows="10" class="form-control"
                                           style="resize: none">{{old('content')}}</textarea>
                             </div>
@@ -86,12 +88,12 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <a href="{{route('news.index')}}" class="btn btn-default"> Назад</a>
+                        <a href="{{route('announcements.index')}}" class="btn btn-default">Назад</a>
                         <button class="btn btn-success pull-right">Додати</button>
                     </div>
                 </div>
             </section>
-        </form>
+        {{Form::close()}}
 
     </div>
 

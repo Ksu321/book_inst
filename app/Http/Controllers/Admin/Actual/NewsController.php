@@ -21,7 +21,7 @@ class NewsController extends Controller
         $news = News::all();
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.news.index', compact(
+        return view('admin.actual.news.index', compact(
             'news',
             'tags',
             'categories'
@@ -37,7 +37,7 @@ class NewsController extends Controller
     {
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
-        return view('admin.news.create', compact(
+        return view('admin.actual.news.create', compact(
             'tags',
             'categories'
             ));
@@ -90,7 +90,7 @@ class NewsController extends Controller
         $categories = Category::pluck('title', 'id')->all();
         $tags = Tag::pluck('title', 'id')->all();
         $selectedTags = $aNews->tags->pluck('id')->all();
-        return view('admin.news.edit', compact(
+        return view('admin.actual.news.edit', compact(
             'aNews',
             'tags',
             'selectedTags',

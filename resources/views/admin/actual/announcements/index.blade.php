@@ -46,12 +46,11 @@
                             <td>
                                 <a href="{{route('announcements.edit', $announcement->id)}}" class="fa fa-pencil"></a>
 
-                                <form action="{{route('announcements.destroy', $announcement->id)}}" method="POST">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button onclick="return confirm('Ви дійсно хочете видалити цього юзера?')" type="submit" class="delete">
-                                        <i class="fa fa-remove"></i>
-                                    </button>
-                                </form>
+                                {{Form::open(['route'=>['announcements.destroy', $announcement->id], 'method'=>'delete'])}}
+                                <button onclick="return confirm('Ви дійсно хочете видалити цей анонс?')" type="submit" class="delete">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                                {{Form::close()}}
                             </td>
                             <td>{{$announcement->city}}</td>
                         </tr>
