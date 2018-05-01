@@ -2,41 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cefc78a9-4c62-44d7-a00a-c2de666e0b40" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Model/BookShop/Publishing.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/AnnouncementController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/AnnouncementController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/BookNewsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/BookNewsController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/NewsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/NewsController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/AuthorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/AuthorController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/IllustratorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/IllustratorController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Authors/Author.php" afterPath="$PROJECT_DIR$/app/Model/Authors/Author.php" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Authors/Illustrator.php" afterPath="$PROJECT_DIR$/app/Model/Authors/Illustrator.php" />
-      <change beforePath="$PROJECT_DIR$/app/Model/BookShop/PublishingHouse.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishing_houses_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/announcements/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/announcements/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/announcements/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/announcements/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/announcements/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/announcements/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/authors/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/authors/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/authors/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/authors/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/authors/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/authors/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/booknews/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/booknews/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/booknews/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/booknews/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/booknews/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/booknews/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/illustrators/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/illustrators/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/illustrators/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/illustrators/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/illustrators/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/authors/illustrators/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/head.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/includes/head.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/news/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/actual/news/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SpecializationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Specialization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/specialization/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/specialization/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/specialization/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/BookShop/Publishing.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/BookShop/Publishing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +28,17 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="177" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="183">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,14 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Model/Authors/Translator.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_04_25_203402_create_illustrators_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_04_25_200854_create_authors_table.php" />
-        <option value="$PROJECT_DIR$/app/Model/Tag.php" />
-        <option value="$PROJECT_DIR$/app/Model/Category.php" />
-        <option value="$PROJECT_DIR$/app/Model/User.php" />
-        <option value="$PROJECT_DIR$/app/Model/Actual/Announcement.php" />
         <option value="$PROJECT_DIR$/app/Model/Actual/News.php" />
         <option value="$PROJECT_DIR$/app/Model/Actual/BookNews.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_04_23_101419_create_book_news_table.php" />
@@ -106,7 +87,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/illustrators/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/Authors/Illustrator.php" />
         <option value="$PROJECT_DIR$/app/Model/BookShop/PublishingHouse.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/IllustratorController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/AuthorController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/BookNewsController.php" />
@@ -117,12 +97,21 @@
         <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishinghouse/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishinghouse/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishing_houses_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_05_01_082229_create_specializations_table.php" />
+        <option value="$PROJECT_DIR$/app/Model/Specialization.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/BookShop/Publishing.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/specialization/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/specialization/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/specialization/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SpecializationController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php" />
       </list>
     </option>
   </component>
@@ -155,7 +144,7 @@
       <path value="$PROJECT_DIR$/resources/assets/admin/bower_components/select2/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
@@ -248,17 +237,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -266,173 +245,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Actual" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Authors" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BookShop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Actual" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Authors" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BookShop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="actual" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="actual" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="announcements" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="authors" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="authors" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="illustrators" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bookshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bookshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="publishing" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="book-institute" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-institute" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="book-institute.org.ua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book-institute.org.ua" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -442,19 +261,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/assets/admin/dist/css" />
-      <recent name="$PROJECT_DIR$/resources/assets/admin/dist/js/pages" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/authors" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/illustrators" />
-      <recent name="$PROJECT_DIR$/resources/assets/admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/admin/authors" />
       <recent name="$PROJECT_DIR$/resources/views/admin/authors/authors" />
       <recent name="$PROJECT_DIR$/resources/views/admin/actual" />
       <recent name="$PROJECT_DIR$/resources/assets/admin/dist/js" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Page/Actual" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
+      <recent name="$PROJECT_DIR$/resources/assets/admin/dist/css" />
+      <recent name="$PROJECT_DIR$/resources/assets/admin/dist/js/pages" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/authors" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/illustrators" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -468,9 +287,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -488,32 +304,34 @@
       <workItem from="1524847334348" duration="9202000" />
       <workItem from="1525107830558" duration="1534000" />
       <workItem from="1525114716695" duration="2542000" />
+      <workItem from="1525161077235" duration="13584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52555000" />
+    <option name="totallyTimeSpent" value="66139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="721" y="-4" width="1303" height="780" extended-state="6" />
+    <frame x="56" y="-11" width="1311" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2613546" sideWeight="0.49921995" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2488336" sideWeight="0.50078005" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49921995" visible="true" weight="0.20839813" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info id="npm" order="0" sideWeight="0.50078005" side_tool="true" weight="0.2488336" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32970452" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,88 +340,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Model/Actual/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/admin/dist/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/admin/dist/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/admin/dist/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/announcements/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="52" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/booknews/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="41" column="113" lean-forward="false" selection-start-line="41" selection-start-column="113" selection-end-line="41" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="42" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partners/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/tags/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-530">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partners/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/tags/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -614,70 +351,46 @@
     <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/news/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/announcements/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="73" column="83" lean-forward="false" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
-        </state>
+        <state relative-caret-position="-408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/booknews/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
-          <caret line="98" column="75" lean-forward="false" selection-start-line="98" selection-start-column="75" selection-end-line="98" selection-end-column="75" />
+          <caret line="98" column="75" selection-start-line="98" selection-start-column="75" selection-end-line="98" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="73" column="74" lean-forward="false" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-188">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/includes/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/includes/head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
-          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -691,49 +404,35 @@
     <entry file="file://$PROJECT_DIR$/app/Model/Authors/Translator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/authors/authors/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/authors/authors/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1008">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_25_200854_create_authors_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_07_171913_create_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Authors/Author.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Actual/Announcement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -747,118 +446,42 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/BookNewsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/AnnouncementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="94" column="34" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270">
-          <caret line="92" column="34" lean-forward="false" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_26_135956_create_translators_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_25_203402_create_illustrators_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="39" />
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_07_173030_create_announcements_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="55" />
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/AuthorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
-          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="106" lean-forward="false" selection-start-line="13" selection-start-column="106" selection-end-line="13" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/announcements/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1908">
-          <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding>
-            <marker date="1525117282390" expanded="true" signature="9:23" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="34:43" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="320:538" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="331:343" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="331:537" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="332:343" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="653:667" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="1024:1038" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="1164:1184" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="1644:1658" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="2665:2682" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="3169:3184" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="3639:3654" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="4322:4336" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="4694:4710" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="4903:4918" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="5103:5119" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="5705:5726" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="5929:5954" ph="..." />
-            <marker date="1525117282390" expanded="true" signature="6128:6141" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#56#92#0#PHP" expanded="true" />
-          </folding>
+          <caret line="13" column="106" selection-start-line="13" selection-start-column="106" selection-end-line="13" selection-end-column="106" />
         </state>
       </provider>
     </entry>
@@ -866,119 +489,216 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <marker date="1524758625665" expanded="true" signature="9:23" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="34:43" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="350:557" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="361:556" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="362:555" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="751:765" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="1188:1208" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="1544:1570" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="1716:1741" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="2411:2430" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="2614:2864" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="2627:2830" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="3041:3323" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="3054:3289" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="3879:3898" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="4108:4182" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="4774:4796" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="5023:5051" ph="..." />
-            <marker date="1524758625665" expanded="true" signature="5237:5250" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <marker date="1525116529117" expanded="true" signature="9:23" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="34:43" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="296:374" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="297:373" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="523:537" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="894:905" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="1487:1498" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="2505:2519" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="3006:3018" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="3473:3485" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="4153:4164" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="4522:4535" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="4728:4740" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="5498:5516" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="5719:5744" ph="..." />
-            <marker date="1525116529117" expanded="true" signature="5951:5964" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/authors/illustrators/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="85" column="16" lean-forward="false" selection-start-line="85" selection-start-column="16" selection-end-line="88" selection-end-column="22" />
-          <folding>
-            <marker date="1524853053255" expanded="true" signature="9:23" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="34:43" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="343:399" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="344:398" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="548:562" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="971:982" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="2694:2706" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="3161:3173" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="3557:3575" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="4476:4492" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="4696:4723" ph="..." />
-            <marker date="1524853053255" expanded="true" signature="4934:4947" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="39" />
-          <folding />
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="88" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/authors/illustrators/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <marker date="1524852800593" expanded="true" signature="9:23" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="34:43" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="651:679" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1255:1284" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1381:1397" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1439:1457" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1499:1518" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1612:1636" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1746:1790" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="1854:1939" ph="..." />
-            <marker date="1524852800593" expanded="true" signature="2226:2239" ph="..." />
-          </folding>
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Authors/IllustratorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_26_135956_create_translators_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_05_01_082128_create_table_specialization.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_07_171913_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Specialization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="e#55#91#0#PHP" expanded="true" />
+            <element signature="e#31#65#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#29#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/announcements/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="49" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_26_140135_create_publishings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BookShop/PublishingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="80" />
+          <folding>
+            <element signature="e#56#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/announcements/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Actual/AnnouncementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="48" />
+          <folding>
+            <element signature="e#2723#2743#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/bookshop/publishing/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="91" column="43" lean-forward="true" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PartnerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" selection-start-line="13" selection-end-line="49" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/specialization/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/specialization/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/specialization/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SpecializationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding>
+            <element signature="e#47#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_05_01_082229_create_specializations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/BookShop/Publishing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="274">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="e#39#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Actual/Announcement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="145" selection-start-line="145" selection-end-line="148" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/actual/news/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -35,15 +35,11 @@
                         </div>
                         <div class="form-group">
                             <label>Спеціалізація</label>
-                            <select class="form-control select2" multiple="multiple" data-placeholder="Виберіть спеціалізацію" style="width: 100%;">
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            {{Form::select('specialization_id',
+                                $specializations,
+                                null,
+                                ['class' => 'form-control select2'])
+                            }}
                         </div>
                         <div class="form-group">
                             <label>Адреса видавництва</label>

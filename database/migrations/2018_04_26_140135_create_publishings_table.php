@@ -19,7 +19,7 @@ class CreatePublishingsTable extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->string('city')->nullable();
-            $table->integer('specialism_id')->nullable();
+            $table->integer('specialization_id')->nullable();
             $table->string('reward')->nullable();
             $table->string('prize')->nullable();
             $table->string('address')->nullable();

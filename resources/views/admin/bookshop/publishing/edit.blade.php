@@ -36,16 +36,12 @@
                             <input type="text" name="city" class="form-control" id="" placeholder="Місто видавництва" value="{{$publish->city}}">
                         </div>
                         <div class="form-group">
-                            <label>Спеціалізація</label>
-                            <select class="form-control select2" multiple="multiple" data-placeholder="Виберіть спеціалізацію" style="width: 100%;">
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <label>Категорія</label>
+                            {{Form::select('specialization_id',
+                                $specializations,
+                                $publish->getSpecializationID(),
+                                ['class' => 'form-control select2'])
+                            }}
                         </div>
                         <div class="form-group">
                             <label>Адреса видавництва</label>

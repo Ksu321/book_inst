@@ -34,6 +34,7 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::get('/', 'DashboardController@index')->name(' index');
     Route::resource('/categories', 'CategoryController');
+    Route::resource('/specializations', 'SpecializationController');
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
     Route::resource('/partners', 'PartnerController');
