@@ -3,6 +3,7 @@
 namespace App\Model\Actual;
 
 use App\Model\Authors\Author;
+use App\Model\Authors\Illustrator;
 use App\Model\Tag;
 use App\Model\User;
 use Carbon\Carbon;
@@ -23,6 +24,16 @@ class BookNews extends Model
     ];
 
 
+    public function authors()
+    {
+        return $this->morphToMany(Author::class, 'authoretables');
+    }
+
+    public function illustrators()
+    {
+        return $this->morphToMany(Illustrator::class, 'illustrattable');
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -32,11 +43,6 @@ class BookNews extends Model
     public function tags()
     {
         return $this->morphToMany(Tag::class, 'taggable');
-    }
-
-    public function author()
-    {
-        return $this->hasOne(Author::class);
     }
 
     public function sluggable()

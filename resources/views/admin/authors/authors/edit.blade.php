@@ -40,10 +40,21 @@
 
                         <!-- checkbox -->
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Видавництва</label>
-                            <input type="text"  class="form-control" id="" placeholder="" value="Demo, demo, demo">
-                            <label for="exampleInputEmail1">Усі книжки</label>
-                            <input type="text" class="form-control" id="" placeholder="" value="Demo, demo">
+                            <label>Видані книжки</label>
+                            {{Form::select('bookNews[]',
+                                $bookNews,
+                                $selectedBookNews,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
+                            }}
+                        </div>
+
+                        <div class="form-group">
+                            <label>Видавництва</label>
+                            {{Form::select('publishings[]',
+                                $publishings,
+                                $selectedPublishings,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                            }}
                         </div>
 
                         <!-- contacts -->

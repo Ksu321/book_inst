@@ -116,7 +116,6 @@ class AnnouncementController extends Controller
             'city' => 'required',
             'image' =>  'nullable|image'
         ]);
-
         $announcement = Announcement::findOrFail($id);
         $announcement->edit($request->all());
         $announcement->uploadImage($request->file('image'));

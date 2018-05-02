@@ -38,8 +38,8 @@
                         <tr>
                             <td>{{$author->id}}</td>
                             <td>{{$author->name}}</td>
-                            <td>Demo, demo</td>
-                            <td>Demo, demo</td>
+                            <td>{{$author->getBookNewsTitles()}}</td>
+                            <td>{{$author->getPublishingsTitles()}}</td>
                             <td><img src="{{$author->getImage()}}" alt="" width="100"></td></td>
                             <td>
                                 <a href="{{route('authors.edit', $author->id)}}" class="fa fa-pencil"></a>

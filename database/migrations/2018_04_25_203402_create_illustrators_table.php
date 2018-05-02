@@ -18,8 +18,6 @@ class CreateIllustratorsTable extends Migration
             $table->string('name');
             $table->string('biography')->nullable();
             $table->string('genre')->nullable();
-            $table->string('publish_id')->nullable();
-            $table->string('book_id')->nullable();
             $table->string('address_url')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();

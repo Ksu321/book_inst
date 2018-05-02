@@ -103,7 +103,7 @@ class Announcement extends Model
 
     public function setTags($ids)
     {
-     if ($ids == null) { return;}
+//     if ($ids == null) { return;}
      $this->tags()->sync($ids);
     }
 

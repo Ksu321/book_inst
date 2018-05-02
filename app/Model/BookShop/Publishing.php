@@ -3,6 +3,9 @@
 
 namespace App\Model\BookShop;
 
+use App\Model\Actual\BookNews;
+use App\Model\Authors\Author;
+use App\Model\Authors\Illustrator;
 use App\Model\BaseModel;
 use App\Model\Specialization;
 use Illuminate\Support\Facades\Storage;
@@ -12,6 +15,17 @@ class Publishing extends BaseModel
     protected $fillable = ['name', 'description', 'image', 'reward', 'prize', 'address',
         'address_url', 'phone', 'email', 'year', 'city'
         ];
+
+
+    public function authors()
+    {
+        return $this->morphToMany(Author::class, 'authoretables');
+    }
+
+    public function illustrators()
+    {
+        return $this->morphToMany(Illustrator::class, 'illustrattable');
+    }
 
     public function specialization()
     {

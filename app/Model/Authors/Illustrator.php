@@ -3,7 +3,9 @@
 namespace App\Model\Authors;
 
 
+use App\Model\Actual\BookNews;
 use App\Model\BaseModel;
+use App\Model\BookShop\Publishing;
 use Illuminate\Support\Facades\Storage;
 
 class Illustrator extends BaseModel
@@ -11,7 +13,15 @@ class Illustrator extends BaseModel
 
     protected $fillable = ['name', 'email', 'biography', 'address_url', 'phone', 'image'];
 
+    public function bookNews()
+    {
+        return $this->morphedByMany(BookNews::class, 'illustrattable');
+    }
 
+    public function publishings()
+    {
+        return $this->morphedByMany(Publishing::class, 'illustrattable');
+    }
 
     public function remove()
     {
@@ -43,4 +53,31 @@ class Illustrator extends BaseModel
         return '/uploads/articles/illustrators/' . $this->image;
     }
 
+
+    public function setBookNews($ids)
+    {
+//        if ($ids == null) { return;}
+        $this->bookNews()->sync($ids);
+    }
+
+    public function getBookNewsTitles()
+    {
+        return (!$this->bookNews->isEmpty())
+            ?   implode(', ', $this->bookNews->pluck('name_book')->all())
+            : 'Книги відсутні';
+    }
+
+    public function setPublishings($ids)
+    {
+//        if ($ids == null) { return;}
+        $this->publishings()->sync($ids);
+    }
+
+
+    public function getPublishingsTitles()
+    {
+        return (!$this->publishings->isEmpty())
+            ?   implode(', ', $this->publishings->pluck('name')->all())
+            : 'Видавництва відсутні';
+    }
 }

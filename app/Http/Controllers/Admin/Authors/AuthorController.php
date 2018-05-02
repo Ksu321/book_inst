@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin\Authors;
 
 
 use App\Http\Controllers\Controller;
+use App\Model\Actual\BookNews;
 use App\Model\Authors\Author;
+use App\Model\BookShop\Publishing;
 use Illuminate\Http\Request;
 
 
@@ -15,12 +17,23 @@ class AuthorController extends Controller
     public function index()
     {
         $authors = Author::all();
-        return view('admin.actual.authors.index', compact('authors'));
+        $bookNews = BookNews::pluck('name_book', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
+        return view('admin.authors.authors.index', compact(
+            'authors',
+            'bookNews',
+            'publishings'
+            ));
     }
 
     public function create()
     {
-        return view('admin.actual.authors.create');
+        $bookNews = BookNews::pluck('name_book', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
+        return view('admin.authors.authors.create', compact(
+            'bookNews',
+            'publishings'
+        ));
     }
 
     public function store(Request $request)
@@ -28,9 +41,10 @@ class AuthorController extends Controller
         $this->validate($request,[
             'name' => 'required',
         ]);
-
         $author = Author::add($request->all());
         $author->uploadImage($request->file('image'));
+        $author->setBookNews($request->get('bookNews'));
+        $author->setPublishings($request->get('publishings'));
         $author->toggleStatus($request->get('status'));
         return redirect()->route('authors.index');
     }
@@ -38,7 +52,17 @@ class AuthorController extends Controller
     public function edit($id)
     {
         $author = Author::findOrFail($id);
-        return view('admin.actual.authors.edit', compact('author'));
+        $bookNews = BookNews::pluck('name_book', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
+        $selectedPublishings = $author->publishings->pluck('id')->all();
+        $selectedBookNews = $author->bookNews->pluck('id')->all();
+        return view('admin.authors.authors.edit', compact(
+            'author',
+            'bookNews',
+            'publishings',
+            'selectedPublishings',
+            'selectedBookNews'
+            ));
     }
 
     public function update(Request $request, $id)
@@ -49,6 +73,8 @@ class AuthorController extends Controller
         $author = Author::findOrFail($id);
         $author->edit($request->all());
         $author->uploadImage($request->file('image'));
+        $author->setBookNews($request->get('bookNews'));
+        $author->setPublishings($request->get('publishings'));
         $author->toggleStatus($request->get('status'));
         return redirect()->route('authors.index');
     }
