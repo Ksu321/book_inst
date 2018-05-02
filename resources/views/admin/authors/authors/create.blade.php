@@ -46,8 +46,13 @@
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
                             }}
                         </div>
-                        <button class="add">Додати</button>
-                        <input type="text" name="name_publishing" class="input">
+                        <div>
+                            <button class="add">Додати</button>
+                            {{Form::open(['route'	=> 'create.book.news'])}}
+                            <input type="text" name="name_book" class="input">
+                            <button class="btn btn-success pull-right">Додати</button>
+                            {{Form::close()}}
+                        </div>
 
                         <div class="form-group">
                             <label>Контакти:</label>

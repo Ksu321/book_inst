@@ -84,4 +84,6 @@ class AuthorController extends Controller
         Author::findOrFail($id)->remove();
         return redirect()->route('authors.index');
     }
+
+
 }

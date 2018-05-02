@@ -43,11 +43,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
         Route::resource('/announcements', 'AnnouncementController');
         Route::resource('/news', 'NewsController');
         Route::resource('/booknews', 'BookNewsController');
+        Route::post('', 'BookNewsController@createForName')->name('create.book.news');
     });
 
     Route::group(['namespace' => 'Authors'], function (){
         Route::resource('/authors', 'AuthorController');
         Route::resource('/illustrators', 'IllustratorController');
+
     });
 
     Route::group(['namespace' => 'BookShop'], function (){

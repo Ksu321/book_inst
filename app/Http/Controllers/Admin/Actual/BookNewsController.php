@@ -47,7 +47,6 @@ class BookNewsController extends Controller
 
     public function edit($id)
     {
-
         $aBookNews = BookNews::findOrFail($id);
         $tags = Tag::pluck('title', 'id')->all();
         $selectedTags = $aBookNews->tags->pluck('id')->all();
@@ -87,5 +86,11 @@ class BookNewsController extends Controller
     {
         BookNews::findOrFail($id)->remove();
         return redirect()->route('booknews.index');
+    }
+
+    public function createForName(Request $request)
+    {
+        $aBookNews = BookNews::add($request->all());
+        dd($request);
     }
 }
