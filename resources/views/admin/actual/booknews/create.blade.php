@@ -96,7 +96,7 @@
 
                             <div class="form-group">
                                 <label>
-                                    <input type="checkbox" class="minimal"  name="status">
+                                    <input type="checkbox" class="minimal" checked  name="status">
                                 </label>
                                 <label>
                                     Чернетка

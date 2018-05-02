@@ -1,8 +1,6 @@
 @extends('admin.layout')
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
                 Додати письменника
@@ -10,7 +8,6 @@
             </h1>
         </section>
 
-        <!-- Main content -->
         <section class="content">
             {{Form::open([
 		'route'	=> 'authors.store',
@@ -41,7 +38,6 @@
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
                             }}
                         </div>
-
                         <div class="form-group">
                             <label>Видавництва</label>
                             {{Form::select('publishings[]',
@@ -50,11 +46,9 @@
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
                             }}
                         </div>
-
                         <button class="add">Додати</button>
-                        <input type="text" name="" class="input">
+                        <input type="text" name="name_publishing" class="input">
 
-                        <!-- contacts -->
                         <div class="form-group">
                             <label>Контакти:</label>
 
