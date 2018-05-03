@@ -42,6 +42,41 @@
                             }}
                         </div>
                         <div class="form-group">
+                            <label>Книги виданні видавництвом </label>
+                            {{Form::select('bookNews[]',
+                                $bookNews,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книги'])
+                            }}
+                        </div>
+                        <div class="form-group">
+                            <label>Автори які працювали з видавництвом</label>
+                            {{Form::select('author[]',
+                                $authors,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть авторів'])
+                            }}
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ілюстратори які працювали з видавництвом</label>
+                            {{Form::select('illustrator[]',
+                                $illustrators,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть ілюстраторів'])
+                            }}
+                        </div>
+
+                        <div class="form-group">
+                            <label>Перекладачі які працювали з видавництвом</label>
+                            {{Form::select('interpreter[]',
+                                $interpreters,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть перекладачів'])
+                            }}
+                        </div>
+
+                        <div class="form-group">
                             <label>Адреса видавництва</label>
                             <input type="text" name="address" class="form-control" id="" placeholder="Адреса видавництва" value="{{old('address')}}">
                         </div>

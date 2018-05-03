@@ -9,16 +9,11 @@
                 Видавництва
             </h1>
         </section>
-
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Видавництва</h3>
                 </div>
-                <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
                         <a href="{{route('publishing.create')}}" class="btn btn-success">Додати</a>
@@ -39,7 +34,7 @@
                             <td>{{$publishing->id}}</td>
                             <td>{{$publishing->name}}</td>
                             <td>{{$publishing->city}}</td>
-                            <td>demo,demo</td>
+                            <td>{{$publishing->getSpecializationTitle()}}</td>
                             <td>
                                 <a href="{{route('publishing.edit', $publishing->id)}}" class="fa fa-pencil"></a>
                                 {{Form::open(['route'=>['publishing.destroy', $publishing->id], 'method'=>'delete'])}}

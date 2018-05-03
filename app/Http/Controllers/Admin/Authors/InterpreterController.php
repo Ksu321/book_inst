@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin\Authors;
 
 
 use App\Http\Controllers\Controller;
+use App\Model\Actual\BookNews;
 use App\Model\Authors\Interpreter;
+use App\Model\BookShop\Publishing;
+use Illuminate\Http\Request;
 
 class InterpreterController extends Controller
 {
@@ -12,11 +15,13 @@ class InterpreterController extends Controller
     public function index()
     {
         $interpreters = Interpreter::all();
-//        $bookNews = BookNews::pluck('name_book', 'id')->all();
-//        $publishings = Publishing::pluck('name', 'id')->all();
+        $bookNews = BookNews::pluck('name_book', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
         return view('admin.authors.interpreters.index', compact(
-            'interpreters'
-            ));
+            'interpreters',
+            'bookNews',
+            'publishings'
+        ));
     }
 
     public function create()
@@ -35,23 +40,23 @@ class InterpreterController extends Controller
             'name' => 'required',
         ]);
 
-        $illustrator = Illustrator::add($request->all());
-        $illustrator->uploadImage($request->file('image'));
-        $illustrator->setBookNews($request->get('bookNews'));
-        $illustrator->setPublishings($request->get('publishings'));
-        $illustrator->toggleStatus($request->get('status'));
+        $interpreter = Interpreter::add($request->all());
+        $interpreter->uploadImage($request->file('image'));
+        $interpreter->setBookNews($request->get('bookNews'));
+        $interpreter->setPublishings($request->get('publishings'));
+        $interpreter->toggleStatus($request->get('status'));
         return redirect()->route('interpreters.index');
     }
 
     public function edit($id)
     {
-        $illustrator = Illustrator::findOrFail($id);
+        $interpreter = Interpreter::findOrFail($id);
         $bookNews = BookNews::pluck('name_book', 'id')->all();
         $publishings = Publishing::pluck('name', 'id')->all();
-        $selectedPublishings = $illustrator->publishings->pluck('id')->all();
-        $selectedBookNews = $illustrator->bookNews->pluck('id')->all();
+        $selectedPublishings = $interpreter->publishings->pluck('id')->all();
+        $selectedBookNews = $interpreter->bookNews->pluck('id')->all();
         return view('admin.authors.interpreters.edit', compact(
-            'illustrator',
+            'interpreter',
             'bookNews',
             'publishings',
             'selectedPublishings',
@@ -64,20 +69,19 @@ class InterpreterController extends Controller
         $this->validate($request, [
             'name' =>'required'
         ]);
-        $illustrator = Illustrator::findOrFail($id);
-        $illustrator->edit($request->all());
-        $illustrator->uploadImage($request->file('image'));
-        $illustrator->setBookNews($request->get('bookNews'));
-        $illustrator->setPublishings($request->get('publishings'));
-        $illustrator->toggleStatus($request->get('status'));
+        $interpreter = Interpreter::findOrFail($id);
+        $interpreter->edit($request->all());
+        $interpreter->uploadImage($request->file('image'));
+        $interpreter->setBookNews($request->get('bookNews'));
+        $interpreter->setPublishings($request->get('publishings'));
+        $interpreter->toggleStatus($request->get('status'));
         return redirect()->route('interpreters.index');
     }
 
     public function destroy($id)
     {
-        Illustrator::findOrFail($id)->remove();
+        Interpreter::findOrFail($id)->remove();
         return redirect()->route('interpreters.index');
     }
-
 
 }

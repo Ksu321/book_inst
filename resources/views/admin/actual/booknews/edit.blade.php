@@ -46,11 +46,38 @@
                                        placeholder="" value="{{$aBookNews->name_book}}">
                             </div>
                             <div class="form-group">
-                                <label>Автор книги</label>
+                                <label>Видавництва </label>
+                                {{Form::select('publishing[]',
+                                    $publishings,
+                                    $selectedPublishings,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                                }}
+                            </div>
+
+                            <div class="form-group">
+                                <label>Автори книги</label>
                                 {{Form::select('author[]',
                                     $authors,
                                     $selectedAuthors,
                                     ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть авторів'])
+                                }}
+                            </div>
+
+                            <div class="form-group">
+                                <label>Ілюстратори </label>
+                                {{Form::select('illustrator[]',
+                                    $illustrators,
+                                    $selectedIllustrators,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть ілюстраторів'])
+                                }}
+                            </div>
+
+                            <div class="form-group">
+                                <label>Перекладачі </label>
+                                {{Form::select('interpreter[]',
+                                    $interpreters,
+                                    $selectedInterpreters,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть перекладачів'])
                                 }}
                             </div>
                             <div class="form-group">

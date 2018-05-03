@@ -9,17 +9,10 @@
             </h1>
 
         </section>
-
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="box">
-
                 <div class="box-header">
                 </div>
-
-                <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
                         <a href="{{route('illustrators.create')}}" class="btn btn-success">Додати</a>

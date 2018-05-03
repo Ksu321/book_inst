@@ -4,35 +4,43 @@ namespace App\Model\Actual;
 
 use App\Model\Authors\Author;
 use App\Model\Authors\Illustrator;
+use App\Model\Authors\Interpreter;
+use App\Model\BaseModel;
+use App\Model\BookShop\Publishing;
 use App\Model\Tag;
 use App\Model\User;
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class BookNews extends Model
+class BookNews extends BaseModel
 {
-    use Sluggable;
-
-    const IS_DRAFT = 0;
-    const IS_PUBLIC = 1;
 
     protected $fillable = ['title','content', 'date', 'description',
         'name_book', 'author_book', 'number_pages', 'genre_book',
         'annotation', 'year_publish',
     ];
 
+    public function publishings()
+    {
+        return $this->morphedByMany(Publishing::class, 'book_relationships');
+    }
 
     public function authors()
     {
-        return $this->morphToMany(Author::class, 'authoretables');
+        return $this->morphedByMany(Author::class, 'book_relationships');
     }
 
     public function illustrators()
     {
-        return $this->morphToMany(Illustrator::class, 'illustrattable');
+        return $this->morphedByMany(Illustrator::class, 'book_relationships');
     }
+
+    public function interpreters()
+    {
+        return $this->morphedByMany(Interpreter::class, 'book_relationships');
+    }
+
 
     public function user()
     {
@@ -45,29 +53,6 @@ class BookNews extends Model
         return $this->morphToMany(Tag::class, 'taggable');
     }
 
-    public function sluggable()
-    {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
-    }
-
-    public static function add($fields)
-    {
-        $announcement = new static;
-        $announcement->fill($fields);
-        $announcement->user_id = 1;
-        $announcement->save();
-        return $announcement;
-    }
-
-    public function edit($fields)
-    {
-        $this->fill($fields);
-        $this->save();
-    }
 
     public function remove()
     {
@@ -99,79 +84,5 @@ class BookNews extends Model
         return '/uploads/articles/booknews/' . $this->image;
     }
 
-    public function setDateAttribute($value)
-    {
-        $date = Carbon::createFromFormat('d/m/y', $value)->format('Y-m-d');
-        $this->attributes['date'] = $date;
-    }
-
-
-    public function setDraft()
-    {
-        $this->status = 0;
-        $this->save();
-    }
-
-    public function setPublic()
-    {
-        $this->status = 1;
-        $this->save();
-    }
-
-    public function toggleStatus($value)
-    {
-        if($value == null)
-        {
-            return $this->setDraft();
-        }
-
-        return $this->setPublic();
-    }
-
-
-    public function getDateAttribute($value)
-    {
-        $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
-
-        return $date;
-    }
-
-    public function getDate()
-    {
-        return Carbon::createFromFormat('d/m/y', $this->date)->format('d.m.Y');
-    }
-
-    public function setTags($ids)
-    {
-//        if ($ids == null) { return;}
-        $this->tags()->sync($ids);
-    }
-
-    public function getTagsTitles()
-    {
-        return (!$this->tags->isEmpty())
-            ?   implode(', ', $this->tags->pluck('title')->all())
-            : 'Теги відсутні';
-    }
-
-    public function getBookNewsTitles()
-    {
-        return (!$this->bookNews->isEmpty())
-            ?   implode(', ', $this->bookNews->pluck('name_book')->all())
-            : 'Книги відсутні';
-    }
-
-    public function setAuthors($ids)
-    {
-//        if ($ids == null) { return;}
-        $this->authors()->sync($ids);
-    }
-
-    public function getAuthorsTitles()
-    {
-        return (!$this->authors->isEmpty())
-            ?   implode(', ', $this->authors->pluck('name')->all())
-            : 'автори відсутні';
-    }
 
 }

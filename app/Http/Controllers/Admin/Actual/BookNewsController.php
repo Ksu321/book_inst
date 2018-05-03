@@ -6,6 +6,9 @@ namespace App\Http\Controllers\Admin\Actual;
 use App\Http\Controllers\Controller;
 use App\Model\Actual\BookNews;
 use App\Model\Authors\Author;
+use App\Model\Authors\Illustrator;
+use App\Model\Authors\Interpreter;
+use App\Model\BookShop\Publishing;
 use App\Model\Tag;
 use Illuminate\Http\Request;
 
@@ -25,10 +28,16 @@ class BookNewsController extends Controller
     public function create()
     {
         $tags = Tag::pluck('title', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
         $authors = Author::pluck('name', 'id')->all();
+        $illustrators = Illustrator::pluck('name', 'id')->all();
+        $interpreters = Interpreter::pluck('name', 'id')->all();
         return view('admin.actual.booknews.create', compact(
             'tags',
-            'authors'
+            'authors',
+            'publishings',
+            'illustrators',
+            'interpreters'
         ));
     }
 
@@ -43,7 +52,10 @@ class BookNewsController extends Controller
         ]);
         $aBookNews = BookNews::add($request->all());
         $aBookNews->uploadImage($request->file('image'));
+        $aBookNews->setPublishings($request->get('publishing'));
         $aBookNews->setAuthors($request->get('author'));
+        $aBookNews->setIllustrators($request->get('illustrator'));
+        $aBookNews->setInterpreters($request->get('interpreter'));
         $aBookNews->setTags($request->get('tags'));
         $aBookNews->toggleStatus($request->get('status'));
         return redirect()->route('booknews.index');
@@ -53,16 +65,27 @@ class BookNewsController extends Controller
     {
         $aBookNews = BookNews::findOrFail($id);
         $tags = Tag::pluck('title', 'id')->all();
+        $publishings = Publishing::pluck('name', 'id')->all();
         $authors = Author::pluck('name', 'id')->all();
+        $illustrators = Illustrator::pluck('name', 'id')->all();
+        $interpreters = Interpreter::pluck('name', 'id')->all();
         $selectedTags = $aBookNews->tags->pluck('id')->all();
+        $selectedPublishings = $aBookNews->publishings->pluck('id')->all();
         $selectedAuthors = $aBookNews->authors->pluck('id')->all();
+        $selectedIllustrators = $aBookNews->illustrators->pluck('id')->all();
+        $selectedInterpreters = $aBookNews->interpreters->pluck('id')->all();
         return view('admin.actual.booknews.edit', compact(
             'aBookNews',
             'tags',
-            'selectedTags',
-            'categories',
+            'publishings',
             'authors',
-            'selectedAuthors'
+            'illustrators',
+            'interpreters',
+            'selectedPublishings',
+            'selectedAuthors',
+            'selectedIllustrators',
+            'selectedInterpreters',
+            'selectedTags'
         ));
     }
 
@@ -78,8 +101,11 @@ class BookNewsController extends Controller
         $aBookNews = BookNews::findOrFail($id);
         $aBookNews->edit($request->all());
         $aBookNews->uploadImage($request->file('image'));
-        $aBookNews->setTags($request->get('tags'));
+        $aBookNews->setPublishings($request->get('publishing'));
         $aBookNews->setAuthors($request->get('author'));
+        $aBookNews->setIllustrators($request->get('illustrator'));
+        $aBookNews->setInterpreters($request->get('interpreter'));
+        $aBookNews->setTags($request->get('tags'));
         $aBookNews->toggleStatus($request->get('status'));
         return redirect()->route('booknews.index');
     }

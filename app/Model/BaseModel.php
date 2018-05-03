@@ -37,11 +37,6 @@ class BaseModel extends Model
     }
 
 
-
-
-
-
-
     public function setDateAttribute($value)
     {
         $date = Carbon::createFromFormat('d/m/y', $value)->format('Y-m-d');
@@ -102,6 +97,25 @@ class BaseModel extends Model
         return $this->category != null ? $this->category->id : 'Нет категории';
     }
 
+    public function setSpecialization($id)
+    {
+        if ($id ==null ) { return;}
+        $this->specialization_id = $id;
+        $this->save();
+    }
+
+    public function getSpecializationID()
+    {
+        return $this->specialization != null ? $this->specialization->id : 'Нет спеціалізації';
+    }
+
+    public function getSpecializationTitle()
+    {
+        return ($this->specialization != null)
+            ?   $this->specialization->title
+            :   'Спеціалізація відсутня';
+    }
+
     public function getDateAttribute($value)
     {
         $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
@@ -112,5 +126,65 @@ class BaseModel extends Model
     public function getDate()
     {
         return Carbon::createFromFormat('d/m/y', $this->date)->format('d.m.Y');
+    }
+
+    public function setPublishings($ids)
+    {
+        $this->publishings()->sync($ids);
+    }
+
+    public function getPublishingsTitles()
+    {
+        return (!$this->publishings->isEmpty())
+            ?   implode(', ', $this->publishings->pluck('name')->all())
+            : 'Видавництва відсутні';
+    }
+
+    public function setBookNews($ids)
+    {
+        $this->bookNews()->sync($ids);
+    }
+
+    public function getBookNewsTitles()
+    {
+        return (!$this->bookNews->isEmpty())
+            ?   implode(', ', $this->bookNews->pluck('name_book')->all())
+            : 'Книги відсутні';
+    }
+
+    public function setAuthors($ids)
+    {
+        $this->authors()->sync($ids);
+    }
+
+    public function getAuthorsTitles()
+    {
+        return (!$this->authors->isEmpty())
+            ?   implode(', ', $this->authors->pluck('name')->all())
+            : 'Автори відсутні';
+    }
+
+    public function setIllustrators($ids)
+    {
+        $this->illustrators()->sync($ids);
+    }
+
+    public function getIllustratorsTitles()
+    {
+        return (!$this->illustrators->isEmpty())
+            ?   implode(', ', $this->illustrators->pluck('name')->all())
+            : 'Ілюстратори відсутні';
+    }
+
+    public function setInterpreters($ids)
+    {
+        $this->interpreters()->sync($ids);
+    }
+
+    public function getInterpretersTitles()
+    {
+        return (!$this->interpreters->isEmpty())
+            ?   implode(', ', $this->interpreters->pluck('name')->all())
+            : 'Перекладачі відсутні';
     }
 }

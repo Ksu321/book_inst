@@ -43,8 +43,8 @@ class AuthorController extends Controller
         ]);
         $author = Author::add($request->all());
         $author->uploadImage($request->file('image'));
-        $author->setBookNews($request->get('bookNews'));
-        $author->setPublishings($request->get('publishings'));
+        $author->setBookNews($request->get('booksNews'));
+        $author->setPublishings($request->get('publishing'));
         $author->toggleStatus($request->get('status'));
         return redirect()->route('authors.index');
     }
@@ -84,6 +84,5 @@ class AuthorController extends Controller
         Author::findOrFail($id)->remove();
         return redirect()->route('authors.index');
     }
-
 
 }

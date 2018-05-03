@@ -16,6 +16,7 @@ class CreateInterpretersTable extends Migration
         Schema::create('interpreters', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('image')->nullable();
             $table->string('biography')->nullable();
             $table->string('address_url')->nullable();
             $table->string('phone')->nullable();

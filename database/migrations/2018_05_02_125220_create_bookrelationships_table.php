@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIllustrattableTable extends Migration
+class CreateBookRelationshipsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateIllustrattableTable extends Migration
      */
     public function up()
     {
-        Schema::create('illustrattable', function (Blueprint $table) {
+        Schema::create('book_relationships', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('illustrator_id');
-            $table->integer('illustrattables_id');
-            $table->string('illustrattables_type');
+            $table->integer('book_news_id');
+            $table->integer('book_relationships_id');
+            $table->string('book_relationships_type');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateIllustrattableTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('illustrattable');
+        Schema::dropIfExists('book_relationships');
     }
 }

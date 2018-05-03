@@ -54,7 +54,6 @@
                                     null,
                                     ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
                                 }}
-
                         </div>
                         <!-- contacts -->
                         <div class="form-group">

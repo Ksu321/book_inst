@@ -18,8 +18,7 @@ class Category extends Model
     {
         return $this->hasMany(
             Announcement::class,
-            News::class,
-            BookNews::class
+            News::class
             );
     }
 

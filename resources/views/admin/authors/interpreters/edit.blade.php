@@ -10,89 +10,91 @@
         </section>
         <section class="content">
             {{Form::open([
-                            'route'	=>	['announcements.update', $announcement->id],
+                            'route'	=>	['interpreters.update', $interpreter->id],
                             'files'	=>	true,
                             'method'	=>	'put'
 	                ])}}
-                <div class="box">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Оновлюємо анонс</h3>
-                        @include('admin.errors')
-                    </div>
+            <div class="box">
+                <div class="box-header with-border">
+                    @include('admin.errors')
+                </div>
+                <div class="box-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Ім’я та прізвище</label>
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Ім’я та прізвище перекладача" value="{{$interpreter->name}}">
+                        </div>
 
-                    <div class="box-body">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Назва</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$announcement->title}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Опис</label>
-                                <textarea class="form-control" name="description" rows="4" cols="45"
-                                          style="resize: none">{{$announcement->description}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <img src="{{$announcement->getImage()}}" alt="" class="img-responsive" width="200">
-                                <label for="exampleInputFile">Лицьова картинка</label>
-                                <input type="file" id="exampleInputFile" name="image">
+                        <div class="form-group">
+                            <img src="{{$interpreter->getImage()}}" alt="" class="img-responsive" width="200">
+                            <label for="exampleInputFile">Фото</label>
+                            <input type="file" name="image" id="exampleInputFile">
+                            <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">З яких мов перекладаєте?</label>
+                            <input type="text" class="form-control" id="" placeholder="Перелік мов" value="">
+                            <label for="exampleInputEmail1">На які мови перекладаєте?</label>
+                            <input type="text" class="form-control" id="" placeholder="Перелік мов" value="">
 
-                                <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
-                            </div>
+
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Місто</label>
-                                <input type="text" name="city" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{$announcement->city}}">
-                            </div>
-                            <div class="form-group">
-                                <label>Категорія</label>
-                                {{Form::select('category_id',
-                                    $categories,
-                                    $announcement->getCategoryID(),
-                                    ['class' => 'form-control select2'])
+                                <label>Видавництва</label>
+                                {{Form::select('publishings[]',
+                                    $publishings,
+                                    $selectedPublishings,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
                                 }}
                             </div>
                             <div class="form-group">
-                                <label>Теги</label>
-                                {{Form::select('tags[]',
-                                    $tags,
-                                    $selectedTags,
-                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть теги'])
+                                <label>Перекладені книжки</label>
+                                {{Form::select('bookNews[]',
+                                    $bookNews,
+                                    $selectedBookNews,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
                                 }}
                             </div>
-                            <div class="form-group">
-                                <label>Дата:</label>
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker" name="date"
-                                           value="{{$announcement->date}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Контакти:</label>
+
+                            <div class="input-group" style="width: 100%;">
+                                <div class="input-group-addon" style="width: 50px;">
+                                    <i class="fa fa-phone"></i>
                                 </div>
+                                <input type="text" name="phone" value="{{$interpreter->phone}}" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="(___) ___-____">
                             </div>
-                            <div class="form-group">
-                                <label>
-                                    {{Form::checkbox('status', '1', $announcement->status, ['class'=>'minimal'])}}
-                                </label>
-                                <label>
-                                    Чернетка
-                                </label>
+                            <div class="input-group" style="width: 100%;">
+                                <span class="input-group-addon" style="width: 50px;"><i class="fa fa-envelope"></i></span>
+                                <input type="email" name="email" class="form-control" placeholder="Email" value="{{$interpreter->email}}">
+                            </div>
+                            <div class="input-group" style="width: 100%;">
+                                <span class="input-group-addon" style="width: 50px;"><i class="fa fa-desktop"></i></span>
+                                <input type="text" name="address_url" class="form-control" placeholder="Ссилка на сайт або на соц мережу" value="{{$interpreter->address_url}}">
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Текст анонсів</label>
-                                <textarea name="content" id="" cols="30" rows="10" class="form-control"
-                                          style="resize: none">{{$announcement->content}}</textarea>
-                            </div>
+                        <div class="form-group">
+                            <label>
+                                {{Form::checkbox('status', '1', $author->status, ['class'=>'minimal'])}}
+                            </label>
+                            <label>
+                                Чернетка
+                            </label>
                         </div>
                     </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer">
-                        <a href="{{route('announcements.index')}}" class="btn btn-default"> Назад</a>
-                        <button class="btn btn-success pull-right">Додати</button>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Біографія</label>
+                            <textarea name="biography" id="" cols="30" rows="10" class="form-control" style="resize: none" placeholder="Опис біографії та навичок перекладача">{{$interpreter->biography}}</textarea>
+
+                        </div>
                     </div>
                 </div>
+                <div class="box-footer">
+                    <a href="{{route('interpreters.index')}}" class="btn btn-default"> Назад</a>
+                    <button class="btn btn-success pull-right">Додати</button>
+                </div>
+            </div>
             {{Form::close()}}
         </section>
 @endsection

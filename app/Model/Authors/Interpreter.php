@@ -7,19 +7,19 @@ namespace App\Model\Authors;
 use App\Model\Actual\BookNews;
 use App\Model\BaseModel;
 use App\Model\BookShop\Publishing;
+use Illuminate\Support\Facades\Storage;
 
 class Interpreter extends BaseModel
 {
 
     public function bookNews()
     {
-        return $this->morphedByMany(BookNews::class, 'authoretables');
+        return $this->morphToMany(BookNews::class, 'book_relationships');
     }
-
 
     public function publishings()
     {
-        return $this->morphedByMany(Publishing::class, 'authoretables');
+        return $this->morphToMany(Publishing::class, 'publishing_relationships');
     }
 
     public function remove()

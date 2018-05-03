@@ -6,25 +6,37 @@ namespace App\Model\BookShop;
 use App\Model\Actual\BookNews;
 use App\Model\Authors\Author;
 use App\Model\Authors\Illustrator;
+use App\Model\Authors\Interpreter;
 use App\Model\BaseModel;
 use App\Model\Specialization;
 use Illuminate\Support\Facades\Storage;
 
 class Publishing extends BaseModel
 {
+
+
     protected $fillable = ['name', 'description', 'image', 'reward', 'prize', 'address',
         'address_url', 'phone', 'email', 'year', 'city'
         ];
 
+    public function bookNews()
+    {
+        return $this->morphToMany(BookNews::class, 'book_relationships');
+    }
 
     public function authors()
     {
-        return $this->morphToMany(Author::class, 'authoretables');
+        return $this->morphedByMany(Author::class, 'publishing_relationships');
     }
 
     public function illustrators()
     {
-        return $this->morphToMany(Illustrator::class, 'illustrattable');
+        return $this->morphedByMany(Illustrator::class, 'publishing_relationships');
+    }
+
+    public function interpreters()
+    {
+        return $this->morphedByMany(Interpreter::class, 'publishing_relationships');
     }
 
     public function specialization()
@@ -62,22 +74,4 @@ class Publishing extends BaseModel
         return '/uploads/articles/publishing/' . $this->image;
     }
 
-    public function setSpecialization($id)
-    {
-        if ($id ==null ) { return;}
-        $this->specialization_id = $id;
-        $this->save();
-    }
-
-    public function getSpecializationID()
-    {
-        return $this->specialization != null ? $this->specialization->id : 'Нет спеціалізації';
-    }
-
-    public function getSpecializationTitle()
-    {
-        return ($this->specialization != null)
-            ?   $this->specialization->title
-            :   'Спеціалізація відсутня';
-    }
 }

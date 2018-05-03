@@ -36,8 +36,8 @@
                             <td>{{$interpreter->id}}</td>
                             <td>{{$interpreter->name}}</td>
                             <td>Demo, demo</td>
-                            <td>Demo, demo</td>
-                            <td>Demo, demo</td>
+                            <td>{{$interpreter->getBookNewsTitels()}}</td>
+                            <td>{{$interpreter->getPublishingTitles()}}</td>
                             <td><img src="{{$interpreter->getImage()}}" alt="" width="100"></td></td>
                             <td>
                                 <a href="{{route('interpreters.edit', $interpreter->id)}}" class="fa fa-pencil"></a>
@@ -52,11 +52,7 @@
                         </tfoot>
                     </table>
                 </div>
-                <!-- /.box-body -->
             </div>
-            <!-- /.box -->
-
         </section>
-        <!-- /.content -->
     </div>
 @endsection
