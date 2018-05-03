@@ -12,6 +12,7 @@
             <li><a href="{{route('illustrators.index')}}"><i class="fa fa-commenting"></i> <span>Ілюстратори</span></a></li>
             <li><a href="{{route('authors.index')}}"><i class="fa fa-commenting"></i> <span>Автори</span></a></li>
             <li><a href="{{route('publishing.index')}}"><i class="fa fa-commenting"></i> <span>Видавництво</span></a></li>
+            <li><a href="{{route('interpreters.index')}}"><i class="fa fa-commenting"></i> <span>Перекладачі</span></a></li>
             <li><a href="{{route('categories.index')}}"><i class="fa fa-list-ul"></i> <span>Категорії</span></a></li>
             <li><a href="{{route('tags.index')}}"><i class="fa fa-tags"></i> <span>Теги</span></a></li>
             <li><a href="{{route('users.index')}}"><i class="fa fa-users"></i> <span>Користувачі</span></a></li>

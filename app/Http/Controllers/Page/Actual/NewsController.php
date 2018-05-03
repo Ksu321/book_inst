@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Page;
 
 
 use App\Http\Controllers\Controller;
-use App\News;
+use App\Model\Actual\News;
+
 
 class NewsController extends Controller
 {

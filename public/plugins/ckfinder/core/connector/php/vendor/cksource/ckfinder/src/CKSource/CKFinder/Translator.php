@@ -15,7 +15,7 @@
 namespace CKSource\CKFinder;
 
 /**
- * The Translator class.
+ * The Interpreter class.
  *
  * @copyright 2016 CKSource - Frederico Knabben
  */
@@ -29,7 +29,7 @@ class Translator
     protected $translations;
 
     /**
-     * Translator constructor.
+     * Interpreter constructor.
      *
      * @param string|null $langCode
      */

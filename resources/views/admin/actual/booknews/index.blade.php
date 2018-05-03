@@ -35,7 +35,7 @@
                                 <td>
                                     <img src="{{$aBookNews->getImage()}}" alt="" width="100">
                                 </td>
-                                <td>{{$aBookNews->author_book}}</td>
+                                <td>{{$aBookNews->getAuthorsTitles()}}</td>
                                 <td>
                                     <a href="{{route('booknews.edit', $aBookNews->id)}}" class="fa fa-pencil"></a>
                                     {{Form::open(['route'=>['booknews.destroy', $aBookNews->id], 'method'=>'delete'])}}

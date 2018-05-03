@@ -143,7 +143,7 @@ class BookNews extends Model
 
     public function setTags($ids)
     {
-        if ($ids == null) { return;}
+//        if ($ids == null) { return;}
         $this->tags()->sync($ids);
     }
 
@@ -152,6 +152,26 @@ class BookNews extends Model
         return (!$this->tags->isEmpty())
             ?   implode(', ', $this->tags->pluck('title')->all())
             : 'Теги відсутні';
+    }
+
+    public function getBookNewsTitles()
+    {
+        return (!$this->bookNews->isEmpty())
+            ?   implode(', ', $this->bookNews->pluck('name_book')->all())
+            : 'Книги відсутні';
+    }
+
+    public function setAuthors($ids)
+    {
+//        if ($ids == null) { return;}
+        $this->authors()->sync($ids);
+    }
+
+    public function getAuthorsTitles()
+    {
+        return (!$this->authors->isEmpty())
+            ?   implode(', ', $this->authors->pluck('name')->all())
+            : 'автори відсутні';
     }
 
 }

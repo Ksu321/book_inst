@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Actual;
 
 use App\Http\Controllers\Controller;
 use App\Model\Actual\BookNews;
+use App\Model\Authors\Author;
 use App\Model\Tag;
 use Illuminate\Http\Request;
 
@@ -24,8 +25,10 @@ class BookNewsController extends Controller
     public function create()
     {
         $tags = Tag::pluck('title', 'id')->all();
+        $authors = Author::pluck('name', 'id')->all();
         return view('admin.actual.booknews.create', compact(
-            'tags'
+            'tags',
+            'authors'
         ));
     }
 
@@ -40,6 +43,7 @@ class BookNewsController extends Controller
         ]);
         $aBookNews = BookNews::add($request->all());
         $aBookNews->uploadImage($request->file('image'));
+        $aBookNews->setAuthors($request->get('author'));
         $aBookNews->setTags($request->get('tags'));
         $aBookNews->toggleStatus($request->get('status'));
         return redirect()->route('booknews.index');
@@ -49,12 +53,16 @@ class BookNewsController extends Controller
     {
         $aBookNews = BookNews::findOrFail($id);
         $tags = Tag::pluck('title', 'id')->all();
+        $authors = Author::pluck('name', 'id')->all();
         $selectedTags = $aBookNews->tags->pluck('id')->all();
+        $selectedAuthors = $aBookNews->authors->pluck('id')->all();
         return view('admin.actual.booknews.edit', compact(
             'aBookNews',
             'tags',
             'selectedTags',
-            'categories'
+            'categories',
+            'authors',
+            'selectedAuthors'
         ));
     }
 
@@ -67,11 +75,11 @@ class BookNewsController extends Controller
             'annotation' => 'required',
             'date' => 'required',
         ]);
-
         $aBookNews = BookNews::findOrFail($id);
         $aBookNews->edit($request->all());
         $aBookNews->uploadImage($request->file('image'));
         $aBookNews->setTags($request->get('tags'));
+        $aBookNews->setAuthors($request->get('author'));
         $aBookNews->toggleStatus($request->get('status'));
         return redirect()->route('booknews.index');
     }
@@ -88,9 +96,4 @@ class BookNewsController extends Controller
         return redirect()->route('booknews.index');
     }
 
-    public function createForName(Request $request)
-    {
-        $aBookNews = BookNews::add($request->all());
-        dd($request);
-    }
 }

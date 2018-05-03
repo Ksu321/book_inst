@@ -37,10 +37,23 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Жанр</label>
                             <input type="text" name="genre" class="form-control" id="" placeholder="Жанри ілюстрації" value="">
-                            <label for="exampleInputEmail1">Видавництва</label>
-                            <input type="text" name="" class="form-control" id="" placeholder="Видавництва, які видавали книги з роботами ілюстратора" value="">
-                            <label for="exampleInputEmail1">Ілюстровані книжки</label>
-                            <input type="text" name="" class="form-control" id="" placeholder="Перелік книжок" value="">
+                        </div>
+
+                        <div class="form-group">
+                                <label>Видавництва</label>
+                                {{Form::select('publishings[]',
+                                    $publishings,
+                                    null,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                                }}
+                            </div>
+                            <div class="form-group">
+                                <label>Ілюстровані книжки</label>
+                                {{Form::select('bookNews[]',
+                                    $bookNews,
+                                    null,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
+                                }}
 
                         </div>
                         <!-- contacts -->
@@ -87,12 +100,8 @@
                     <a href="{{route('illustrators.index')}}" class="btn btn-default"> Назад</a>
                     <button class="btn btn-success pull-right">Додати</button>
                 </div>
-                <!-- /.box-footer-->
             </div>
             {{Form::close()}}
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
 @endsection

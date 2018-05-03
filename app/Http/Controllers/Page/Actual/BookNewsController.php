@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\BookNews;
 use App\Http\Controllers\Controller;
+use App\Model\Actual\BookNews;
 
 class BookNewsController extends Controller
 {

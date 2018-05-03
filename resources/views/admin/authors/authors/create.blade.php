@@ -48,10 +48,10 @@
                         </div>
                         <div>
                             <button class="add">Додати</button>
-                            {{Form::open(['route'	=> 'create.book.news'])}}
+
                             <input type="text" name="name_book" class="input">
                             <button class="btn btn-success pull-right">Додати</button>
-                            {{Form::close()}}
+
                         </div>
 
                         <div class="form-group">

@@ -41,10 +41,14 @@
                                 <input type="text" name="name_book" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{old('name_book')}}">
                             </div>
+
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Автор книги</label>
-                                <input type="text" name="author_book" class="form-control" id="exampleInputEmail1"
-                                       placeholder="" value="{{old('author_book')}}">
+                                <label>Автор книги</label>
+                                {{Form::select('author[]',
+                                    $authors,
+                                    null,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть авторів'])
+                                }}
                             </div>
 
                             <div class="form-group">

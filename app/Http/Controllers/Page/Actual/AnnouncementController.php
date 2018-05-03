@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Announcement;
+
 use App\Http\Controllers\Controller;
+use App\Model\Actual\Announcement;
 
 class AnnouncementController extends Controller
 {

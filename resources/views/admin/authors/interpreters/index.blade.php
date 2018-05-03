@@ -5,48 +5,44 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Ілюстратори
+                Перекладачі
             </h1>
-
         </section>
-
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="box">
-
                 <div class="box-header">
-                </div>
 
+                </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
-                        <a href="{{route('illustrators.create')}}" class="btn btn-success">Додати</a>
+                        <a href="{{route('interpreters.create')}}" class="btn btn-success">Додати</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Імʼя/псевдонім</th>
+                            <th>Ім'я</th>
+                            <th>Мови</th>
                             <th>Книжки</th>
                             <th>Видавництва</th>
                             <th>Фото</th>
                             <th>Дії</th>
                         </tr>
                         </thead>
-                        @foreach($illustrators as $illustrator)
                         <tbody>
+                        @foreach($interpreters as $interpreter)
                         <tr>
-                            <td>{{$illustrator->id}}</td>
-                            <td>{{$illustrator->name}}</td>
-                            <td>{{$illustrator->getBookNewsTitles()}}</td>
-                            <td>{{$illustrator->getPublishingsTitles()}}</td>
-                            <td><img src="{{$illustrator->getImage()}}" alt="" width="100"></td></td>
+                            <td>{{$interpreter->id}}</td>
+                            <td>{{$interpreter->name}}</td>
+                            <td>Demo, demo</td>
+                            <td>Demo, demo</td>
+                            <td>Demo, demo</td>
+                            <td><img src="{{$interpreter->getImage()}}" alt="" width="100"></td></td>
                             <td>
-                                <a href="{{route('illustrators.edit', $illustrator->id)}}" class="fa fa-pencil"></a>
-                                {{Form::open(['route'=>['illustrators.destroy', $illustrator->id], 'method'=>'delete'])}}
-                                <button onclick="return confirm('Ви дійсно хочете видалити цього ілюстратора?')" type="submit" class="delete">
+                                <a href="{{route('interpreters.edit', $interpreter->id)}}" class="fa fa-pencil"></a>
+                                {{Form::open(['route'=>['interpreters.destroy', $interpreter->id], 'method'=>'delete'])}}
+                                <button onclick="return confirm('Ви дійсно хочете видалити цього перекладача?')" type="submit" class="delete">
                                     <i class="fa fa-remove"></i>
                                 </button>
                                 {{Form::close()}}
@@ -58,6 +54,9 @@
                 </div>
                 <!-- /.box-body -->
             </div>
+            <!-- /.box -->
+
         </section>
+        <!-- /.content -->
     </div>
 @endsection
