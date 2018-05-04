@@ -32,7 +32,7 @@ Auth::routes();
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
-    Route::get('/', 'DashboardController@index')->name(' index');
+    Route::get('/', 'DashboardController@index')->name('admin.index');
     Route::resource('/categories', 'CategoryController');
     Route::resource('/specializations', 'SpecializationController');
     Route::resource('/tags', 'TagController');

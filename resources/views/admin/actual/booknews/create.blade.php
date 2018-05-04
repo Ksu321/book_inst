@@ -44,11 +44,19 @@
 
                             <div class="form-group">
                                 <label>Видавництва </label>
-                                {{Form::select('publishing[]',
-                                    $publishings,
-                                    null,
-                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
-                                }}
+                                <input type="text" name="publishings" class="form-control" id="exampleInputEmail1"
+                                       placeholder="" value="{{old('publishings')}}">
+                            </div>
+
+                            <div>
+                                <a class="add js-add-select">Додати</a>
+                                <div class="form-group js-select-block">
+                                    {{Form::select('publishings[]',
+                                        $publishings,
+                                        null,
+                                        ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                                    }}
+                                </div>
                             </div>
 
                             <div class="form-group">

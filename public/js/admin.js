@@ -3069,10 +3069,11 @@ function _init(){
   }
 })(jQuery, $.AdminLTE);
 
+"use strict";
 $(document).ready(function() {
-	$('.add').click(function() {
-		$('.input').css({'display': 'block', 'marginBottom': '15px'});
-		return false;
+	$('.js-add-select').click(function() {
+        event.preventDefault();
+		$('.js-select-block').toggle('slow');
 	});
 
     $("#example1").DataTable();

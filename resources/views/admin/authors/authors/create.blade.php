@@ -47,11 +47,14 @@
                             }}
                         </div>
                         <div>
-                            <button class="add">Додати</button>
-
-                            <input type="text" name="name_book" class="input">
-                            <button class="btn btn-success pull-right">Додати</button>
-
+                            <a class="add js-add-select">Додати</a>
+                            <div class="form-group js-select-block">
+                                {{Form::select('publishings[]',
+                                    $publishings,
+                                    null,
+                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                                }}
+                            </div>
                         </div>
 
                         <div class="form-group">
