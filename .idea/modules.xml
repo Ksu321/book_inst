@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/book-institute.iml" filepath="$PROJECT_DIR$/.idea/book-institute.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/book-institute.org.ua.iml" filepath="$PROJECT_DIR$/.idea/book-institute.org.ua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/book-institute.iml" filepath="$PROJECT_DIR$/.idea/book-institute.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/book-institute.org.ua.iml" filepath="$PROJECT_DIR$/.idea/book-institute.org.ua.iml" />
     </modules>
   </component>

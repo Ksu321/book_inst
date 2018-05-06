@@ -53,6 +53,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
 
     Route::group(['namespace' => 'BookShop'], function (){
         Route::resource('/publishing', 'PublishingController');
+        Route::resource('/statistics', 'StatisticController');
     });
 });
 

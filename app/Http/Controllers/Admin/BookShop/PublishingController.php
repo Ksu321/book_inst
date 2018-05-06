@@ -19,7 +19,7 @@ class PublishingController extends Controller
     {
         $publishings = Publishing::all();
         $specializations = Specialization::pluck('title', 'id')->all();
-        return view('admin.bookshop.publishing.index', compact(
+        return view('admin.bookshops.publishing.index', compact(
             'publishings',
             'specializations'
             ));
@@ -32,7 +32,7 @@ class PublishingController extends Controller
         $authors = Author::pluck('name', 'id')->all();
         $illustrators = Illustrator::pluck('name', 'id')->all();
         $interpreters = Interpreter::pluck('name', 'id')->all();
-        return view('admin.bookshop.publishing.create', compact(
+        return view('admin.bookshops.publishing.create', compact(
             'specializations',
             'bookNews',
             'authors',
@@ -69,7 +69,7 @@ class PublishingController extends Controller
         $selectedAuthors = $publishing->authors->pluck('id')->all();
         $selectedIllustrators = $publishing->illustrators->pluck('id')->all();
         $selectedInterpreters = $publishing->interpreters->pluck('id')->all();
-        return view('admin.bookshop.publishing.edit', compact(
+        return view('admin.bookshops.publishing.edit', compact(
             'publishing',
             'specializations',
             'bookNews',

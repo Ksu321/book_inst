@@ -30,7 +30,7 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="general.html"><i class="fa fa-bar-chart"></i>Статистика</a></li>
+                    <li><a href="{{route('statistics.index')}}"><i class="fa fa-bar-chart"></i>Статистики</a></li>
                     <li><a href="{{route('publishing.index')}}"><i class="fa fa-file"></i>Видавництва</a></li>
                     <li><a href="editors.html"><i class="fa fa-home"></i>Книгарні</a></li>
                     <li><a href="editors.html"><i class="fa fa-tree"></i>Фестивалі/Ярмарки</a></li>

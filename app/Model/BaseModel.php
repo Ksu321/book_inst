@@ -4,11 +4,15 @@ namespace App\Model;
 
 
 use Carbon\Carbon;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
 class BaseModel extends Model
 {
+
+    use Sluggable;
+
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
 
