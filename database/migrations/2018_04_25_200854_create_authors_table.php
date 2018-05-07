@@ -17,8 +17,15 @@ class CreateAuthorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('biography')->nullable();
+            $table->string('booksnews_name')->nullable();
+            $table->string('publishings_name')->nullable();
             $table->string('address_url')->nullable();
             $table->string('phone')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('google')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
             $table->string('email')->nullable();
             $table->string('image')->nullable();
             $table->integer('user_id')->nullable();

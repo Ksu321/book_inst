@@ -15,8 +15,9 @@ class Publishing extends BaseModel
 {
 
 
-    protected $fillable = ['name', 'description', 'image', 'reward', 'prize', 'address',
-        'address_url', 'phone', 'email', 'year', 'city'
+    protected $fillable = ['name', 'description', 'image', 'ukrainian_prizes', 'international_prizes', 'address',
+        'address_url', 'phone', 'email', 'year', 'city', 'authors_name',
+        'illustrators_name', 'interpreters_name', 'booksnews_name'
         ];
 
     public function bookNews()

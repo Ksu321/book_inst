@@ -41,39 +41,89 @@
                                 ['class' => 'form-control select2'])
                             }}
                         </div>
-                        <div class="form-group">
-                            <label>Книги виданні видавництвом </label>
-                            {{Form::select('bookNews[]',
+                        <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                        <div class="field-container js-child-block">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <div class="row">
+                                        <label class="col-md-3">Книжкові новини</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="" name="booksnews_name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    {{Form::select('bookNews[]',
                                 $bookNews,
                                 null,
-                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книги'])
+                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть книжки'])
                             }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Автори які працювали з видавництвом</label>
-                            {{Form::select('author[]',
+                        <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                        <div class="field-container js-child-block">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <div class="row">
+                                        <label class="col-md-3">Автори</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="" name="authors_name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    {{Form::select('author[]',
                                 $authors,
                                 null,
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть авторів'])
                             }}
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label>Ілюстратори які працювали з видавництвом</label>
-                            {{Form::select('illustrator[]',
+
+
+                        <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                        <div class="field-container js-child-block">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <div class="row">
+                                        <label class="col-md-3">Ілюстратори</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="" name="illustrators_name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    {{Form::select('illustrator[]',
                                 $illustrators,
                                 null,
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть ілюстраторів'])
                             }}
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label>Перекладачі які працювали з видавництвом</label>
-                            {{Form::select('interpreter[]',
+                        <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                        <div class="field-container js-child-block">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <div class="row">
+                                        <label class="col-md-3">Перекладачі</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="" name="interpreters_name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    {{Form::select('interpreter[]',
                                 $interpreters,
                                 null,
                                 ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть перекладачів'])
                             }}
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -93,9 +143,7 @@
                                 <span class="input-group-addon" style="width: 50px;"><i class="fa fa-envelope"></i></span>
                                 <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
                             </div>
-                            <!-- /.input group -->
                         </div>
-                        <!-- /.form group -->
                         <div class="form-group">
                             <label>Рік заснування:</label>
 
@@ -105,13 +153,12 @@
                                 </div>
                                 <input type="number" name="year" class="form-control" id="" placeholder="1999" value="{{old('year')}}">
                             </div>
-                            <!-- /.input group -->
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Премії</label>
-                            <input type="text" name="reward" class="form-control" id="" placeholder="" value="{{old('reward')}}">
-                            <label for="exampleInputEmail1">Відзнаки</label>
-                            <input type="text" name="prize" class="form-control" id="" placeholder="" value="{{old('prize')}}">
+                            <label for="exampleInputEmail1">Українські премії, нагороди, відзнаки </label>
+                            <input type="text" name="ukrainian_prizes" class="form-control" id="" placeholder="" value="{{old('ukrainian_prizes')}}">
+                            <label for="exampleInputEmail1">Міжнародні премії, нагороди, відзнаки</label>
+                            <input type="text" name="international_prizes" class="form-control" id="" placeholder="" value="{{old('international_prizes')}}">
                         </div>
                         <div class="form-group">
                             <label>
@@ -129,17 +176,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.box-body -->
                 <div class="box-footer">
                     <a href="{{route('publishing.index')}}" class="btn btn-default"> Назад</a>
                     <button class="btn btn-success pull-right">Додати</button>
                 </div>
-                <!-- /.box-footer-->
             </div>
         {{Form::close()}}
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
     @endsection

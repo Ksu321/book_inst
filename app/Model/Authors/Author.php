@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Storage;
 
 class Author extends BaseModel
 {
-    protected $fillable = ['name', 'email', 'biography', 'address_url', 'phone', 'image'];
+    protected $fillable = ['name', 'email', 'biography', 'address_url', 'phone', 'image', 'publishings_name',
+        'booksnews_name', 'twitter', 'google', 'youtube', 'facebook', 'instagram'
+    ];
 
 
     public function bookNews()

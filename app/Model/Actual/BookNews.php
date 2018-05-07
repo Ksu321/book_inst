@@ -17,8 +17,9 @@ class BookNews extends BaseModel
 {
 
     protected $fillable = ['title','content', 'date', 'description',
-        'name_book', 'author_book', 'number_pages', 'genre_book',
-        'annotation', 'year_publish',
+        'name_book', 'number_pages', 'genre_book',
+        'annotation', 'year_publish', 'publishings_name', 'authors_name',
+        'illustrators_name', 'interpreters_name'
     ];
 
     public function publishings()

@@ -45,41 +45,95 @@
                                 <input type="text" name="name_book" class="form-control" id="exampleInputEmail1"
                                        placeholder="" value="{{$aBookNews->name_book}}">
                             </div>
-                            <div class="form-group">
-                                <label>Видавництва </label>
-                                {{Form::select('publishing[]',
-                                    $publishings,
-                                    $selectedPublishings,
-                                    ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
-                                }}
+                            <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                            <div class="field-container js-child-block">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="row">
+                                            <label class="col-md-3">Видавництва</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="" name="{{$aBookNews->publishings_name}}">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {{Form::select('publishings[]',
+                                            $publishings,
+                                            $selectedPublishings,
+                                            ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть видавництва'])
+                                        }}
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div class="form-group">
-                                <label>Автори книги</label>
-                                {{Form::select('author[]',
+                            <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                            <div class="field-container js-child-block">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="row">
+                                            <label class="col-md-3">Автори</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="" name="{{$aBookNews->authors_name}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {{Form::select('author[]',
                                     $authors,
                                     $selectedAuthors,
                                     ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть авторів'])
                                 }}
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Ілюстратори </label>
-                                {{Form::select('illustrator[]',
+
+
+                            <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                            <div class="field-container js-child-block">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="row">
+                                            <label class="col-md-3">Ілюстратори</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="" name="{{$aBookNews->illustrators_name}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {{Form::select('illustrator[]',
                                     $illustrators,
                                     $selectedIllustrators,
                                     ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть ілюстраторів'])
                                 }}
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Перекладачі </label>
-                                {{Form::select('interpreter[]',
+
+                            <div class="field-toggle"><a class="btn js-add-select">Вибір</a></div>
+                            <div class="field-container js-child-block">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="row">
+                                            <label class="col-md-3">Перекладачі</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="" name="{{$aBookNews->interpreters_name}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {{Form::select('interpreter[]',
                                     $interpreters,
                                     $selectedInterpreters,
                                     ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Виберіть перекладачів'])
                                 }}
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="form-group">
 
                                 <label>Рік видання книги:</label>

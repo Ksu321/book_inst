@@ -19,9 +19,13 @@ class CreatePublishingsTable extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->string('city')->nullable();
+            $table->string('booksnews_name')->nullable();
+            $table->string('authors_name')->nullable();
+            $table->string('illustrators_name')->nullable();
+            $table->string('interpreters_name')->nullable();
             $table->integer('specialization_id')->nullable();
-            $table->string('reward')->nullable();
-            $table->string('prize')->nullable();
+            $table->string('ukrainian_prizes')->nullable();
+            $table->string('international_prizes')->nullable();
             $table->string('address')->nullable();
             $table->string('address_url')->nullable();
             $table->string('phone')->nullable();

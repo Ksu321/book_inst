@@ -18,9 +18,12 @@ class CreateBookNewsTable extends Migration
             $table->string('title');
             $table->string('description')->nullable();
             $table->string('slug');
+            $table->string('publishings_name')->nullable();
+            $table->string('authors_name')->nullable();
+            $table->string('illustrators_name')->nullable();
+            $table->string('interpreters_name')->nullable();
             $table->string('image')->nullable();
             $table->string('name_book')->nullable();
-            $table->string('author_book')->nullable();
             $table->string('number_pages')->nullable();
             $table->integer('year_publish')->nullable();
             $table->date('date')->nullable();

@@ -3073,7 +3073,12 @@ function _init(){
 $(document).ready(function() {
 	$('.js-add-select').click(function() {
         event.preventDefault();
-		$('.js-select-block').toggle('slow');
+		var childList = $('.js-child-block').find('.form-group');
+		childList.each(function () {
+             $(this).toggle();
+        });
+
+
 	});
 
     $("#example1").DataTable();

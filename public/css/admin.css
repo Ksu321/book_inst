@@ -1756,6 +1756,18 @@ td .fa:before{font-size: 20px !important; margin-left: 10px;}
 .add {
 	margin-bottom: 15px;
 }
-.input {
+.field-container .form-group{
 	display: none;
+
+}
+.field-container .form-group:last-child{
+	display: block;
+}
+.field-container .form-group input{
+	width: 100%;
+}
+.field-toggle .btn{
+	border-color: #ccc;
+	margin-bottom: 15px;
+	background-color: #eee;
 }

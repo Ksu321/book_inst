@@ -5,19 +5,9 @@
             <h1>
                 Категорії
             </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Examples</a></li>
-                <li class="active">Blank page</li>
-            </ol>
         </section>
-
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="box">
-                <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
                         <a href="{{route('categories.create')}}" class="btn btn-success">Додати</a>
@@ -43,17 +33,12 @@
                                     {{Form::close()}}
                                 </td>
                             </tr>
-
                         @endforeach
                         </tfoot>
                     </table>
                 </div>
-                <!-- /.box-body -->
             </div>
-            <!-- /.box -->
-
         </section>
-        <!-- /.content -->
     </div>
 
 @endsection
