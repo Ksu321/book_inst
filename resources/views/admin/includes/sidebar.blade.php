@@ -52,7 +52,7 @@
                 </ul>
             </li>
             <!--         каталоги -->
-            <li><a href="../../catalogs/single/index.html"><i class="fa fa-sitemap"></i> <span>Каталоги</span></a></li>
+            <li><a href="{{route('catalogs.index')}}"><i class="fa fa-sitemap"></i> <span>Каталоги</span></a></li>
             <!--         можливості -->
             <li class="treeview">
                 <a href="#">

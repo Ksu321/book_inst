@@ -11,19 +11,10 @@ use Illuminate\Support\Facades\Storage;
 class BaseModel extends Model
 {
 
-    use Sluggable;
 
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
 
-    public function sluggable()
-    {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
-    }
 
     public static function add($fields)
     {
@@ -190,5 +181,63 @@ class BaseModel extends Model
         return (!$this->interpreters->isEmpty())
             ?   implode(', ', $this->interpreters->pluck('name')->all())
             : 'Перекладачі відсутні';
+    }
+
+
+    public function uploadImage($image)
+    {
+        if ($image == null) { return; }
+        $this->removeImage();
+        $filename = str_random(10).'.'. $image->extension();
+        $image->storeAs('uploads/articles/', $filename);
+        $this->image = $filename;
+        $this->save();
+    }
+
+    public function removeImage()
+    {
+        if($this->image != null)
+        {
+            Storage::delete('uploads/articles/' . $this->image);
+        }
+    }
+
+    public function getImage()
+    {
+        if ($this->image == null) { return 'img/no-img.png'; }
+        return '/uploads/articles/' . $this->image;
+    }
+
+    public function remove()
+    {
+        $this->removeFile();
+        $this->removeImage();
+        $this->delete();
+    }
+
+    public function uploadFile($file)
+    {
+        if ($file == null) { return; }
+        $this->removeFile();
+        $filename =  $file->getClientOriginalName();
+        $file->storeAs('uploads/articles/', $filename);
+        $this->file = $filename;
+        $this->save();
+    }
+
+    public function removeFile()
+    {
+        if($this->file != null)
+        {
+            Storage::delete('uploads/articles/' . $this->file);
+        }
+    }
+
+    public function getFile()
+    {
+        if ($this->file == null) {
+            return null;
+        }
+        return '/uploads/articles/' . $this->file;
     }
 }

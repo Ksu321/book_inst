@@ -38,6 +38,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
     Route::resource('/tags', 'TagController');
     Route::resource('/users', 'UserController');
     Route::resource('/partners', 'PartnerController');
+    Route::resource('/catalogs', 'CatalogController');
+
 
     Route::group(['namespace' => 'Actual'], function (){
         Route::resource('/announcements', 'AnnouncementController');
@@ -49,6 +51,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
         Route::resource('/authors', 'AuthorController');
         Route::resource('/illustrators', 'IllustratorController');
         Route::resource('/interpreters', 'InterpreterController');
+
     });
 
     Route::group(['namespace' => 'BookShop'], function (){

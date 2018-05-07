@@ -15,12 +15,20 @@ use Illuminate\Support\Facades\Storage;
 
 class BookNews extends BaseModel
 {
-
+    use Sluggable;
     protected $fillable = ['title','content', 'date', 'description',
         'name_book', 'number_pages', 'genre_book',
         'annotation', 'year_publish', 'publishings_name', 'authors_name',
         'illustrators_name', 'interpreters_name'
     ];
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
     public function publishings()
     {
@@ -54,36 +62,6 @@ class BookNews extends BaseModel
         return $this->morphToMany(Tag::class, 'taggable');
     }
 
-
-    public function remove()
-    {
-        $this->removeImage();
-        $this->delete();
-    }
-
-    public function uploadImage($image)
-    {
-        if ($image == null) { return; }
-        $this->removeImage();
-        $filename = str_random(10).'.'. $image->extension();
-        $image->storeAs('uploads/articles/booknews/', $filename);
-        $this->image = $filename;
-        $this->save();
-    }
-
-    public function removeImage()
-    {
-        if($this->image != null)
-        {
-            Storage::delete('uploads/articles/booknews/' . $this->image);
-        }
-    }
-
-    public function getImage()
-    {
-        if ($this->image == null) { return 'img/no-img.png'; }
-        return '/uploads/articles/booknews/' . $this->image;
-    }
 
 
 }

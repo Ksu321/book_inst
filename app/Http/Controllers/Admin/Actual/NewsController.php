@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin\Actual;
 
 use App\Model\Actual\News;
 use App\Http\Controllers\Controller;
-
 use App\Model\Category;
 use App\Model\Tag;
 use Illuminate\Http\Request;

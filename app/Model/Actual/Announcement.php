@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Announcement extends BaseModel
 {
-
+    use Sluggable;
     protected $fillable = ['title','content', 'date', 'description', 'city'];
 
     public function category()
@@ -31,34 +31,13 @@ class Announcement extends BaseModel
         return $this->morphToMany(Tag::class, 'taggable');
     }
 
-    public function remove()
-    {
-        $this->removeImage();
-        $this->delete();
-    }
 
-    public function uploadImage($image)
+    public function sluggable()
     {
-        if ($image == null) { return; }
-        $this->removeImage();
-        $filename = str_random(10).'.'. $image->extension();
-        $image->storeAs('uploads/articles/announcements/', $filename);
-        $this->image = $filename;
-        $this->save();
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
-
-    public function removeImage()
-    {
-        if($this->image != null)
-        {
-            Storage::delete('uploads/articles/announcements/' . $this->image);
-        }
-    }
-
-    public function getImage()
-    {
-        if ($this->image == null) { return 'img/no-img.png'; }
-        return '/uploads/articles/announcements/' . $this->image;
-    }
-
 }

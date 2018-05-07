@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 class News extends BaseModel
 {
-
+    use Sluggable;
     protected $fillable = ['title','content', 'date', 'description', 'city'];
 
 
@@ -32,35 +32,13 @@ class News extends BaseModel
         return $this->belongsTo(User::class, 'user_id');
     }
 
-
-    public function remove()
+    public function sluggable()
     {
-        $this->removeImage();
-        $this->delete();
-    }
-
-    public function uploadImage($image)
-    {
-        if ($image == null) { return; }
-        $this->removeImage();
-        $filename = str_random(10).'.'. $image->extension();
-        $image->storeAs('uploads/articles/news/', $filename);
-        $this->image = $filename;
-        $this->save();
-    }
-
-    public function removeImage()
-    {
-        if($this->image != null)
-        {
-            Storage::delete('uploads/articles/news/' . $this->image);
-        }
-    }
-
-    public function getImage()
-    {
-        if ($this->image == null) { return 'img/no-img.png'; }
-        return '/uploads/articles/news/' . $this->image;
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 
 

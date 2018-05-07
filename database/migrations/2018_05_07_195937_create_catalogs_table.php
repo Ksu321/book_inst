@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookMediaTable extends Migration
+class CreateCatalogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateBookMediaTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_media', function (Blueprint $table) {
+        Schema::create('catalogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('name');
             $table->string('description')->nullable();
-            $table->string('slug');
+            $table->string('link')->nullable();
+            $table->string('file')->nullable();
             $table->string('image')->nullable();
-            $table->string('city')->nullable();
+            $table->string('year')->nullable();
             $table->integer('user_id')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
@@ -33,6 +34,6 @@ class CreateBookMediaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book_media');
+        Schema::dropIfExists('catalogs');
     }
 }
