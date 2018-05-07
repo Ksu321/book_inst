@@ -1771,3 +1771,15 @@ td .fa:before{font-size: 20px !important; margin-left: 10px;}
 	margin-bottom: 15px;
 	background-color: #eee;
 }
+
+.whole-block-control .btn{
+	background-color: #eee;
+	border: 1px solid #0000004f;
+	margin-bottom: 10px;
+}
+.whole-block .btn-del{
+	display: none;
+}
+.clone-inp{
+	margin-bottom: 10px;
+}

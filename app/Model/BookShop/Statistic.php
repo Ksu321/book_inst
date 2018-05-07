@@ -10,7 +10,7 @@ class Statistic extends BaseModel
 {
 
     protected $fillable = ['title', 'description', 'image', 'content',
-        'file', 'date'
+        'file', 'date', 'front_image'
     ];
 
     public function remove()

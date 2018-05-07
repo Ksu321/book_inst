@@ -24,9 +24,22 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Лицьова картинка</label>
-                                <input type="file" name="image" value="{{old('image')}}" id="exampleInputFile">
+                                <input type="file" name="front_image" value="" id="exampleInputFile">
 
                                 <p class="help-block">Формат завантаження картинки має бути .jpeg або .png</p>
+                            </div>
+
+                            <div class="form-group">
+                                <img src="" alt="" class="img-responsive" width="200">
+
+                                <label for="exampleInputFile">Зображення до галереї</label>
+                                <div class="whole-block-control">
+                                    <a class="btn btn-add js-add-sameInput">+</a>
+                                    <a class="btn btn-del js-delete-sameInput">-</a>
+                                    <input type="file" class="clone-inp" name="image" id="exampleInputFile">
+                                </div>
+                                <div class="whole-block">
+                                </div>
                             </div>
 
                             <div class="form-group">

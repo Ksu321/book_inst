@@ -17,6 +17,7 @@ class CreateStatisticsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
+            $table->string('front_image')->nullable();
             $table->string('image')->nullable();
             $table->string('content')->nullable();
             $table->string('file')->nullable();
@@ -26,6 +27,13 @@ class CreateStatisticsTable extends Migration
             $table->timestamps();
         });
     }
+
+
+
+
+
+
+    
 
     /**
      * Reverse the migrations.

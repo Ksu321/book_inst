@@ -3071,15 +3071,32 @@ function _init(){
 
 "use strict";
 $(document).ready(function() {
-	$('.js-add-select').click(function() {
+	$('.js-add-select').click(function( ) {
         event.preventDefault();
-		var childList = $('.js-child-block').find('.form-group');
+        var btnParent = $(this).parent();
+
+		var childList = btnParent.next('.js-child-block').find('.form-group');
 		childList.each(function () {
              $(this).toggle();
         });
 
 
 	});
+
+
+        $('.js-add-sameInput').click(function () {
+            var cloneInput = $(this).parent().find('input').clone();
+            $(this).parent().next().append(cloneInput);
+        });
+    $('.js-delete-sameInput').click(function () {
+        var currentInput = $(this).parent().next().find('input');
+         var last = currentInput.last();
+        last.remove();
+
+    });
+
+
+
 
     $("#example1").DataTable();
     $(".select2").select2();
